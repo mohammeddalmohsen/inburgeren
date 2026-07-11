@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['icon-192.png', 'icon-512.png', 'maskable-512.png'],
       manifest: {
-        name: 'NT2 Lezen B1 — Parafrase Lab',
+        name: 'NT2 Lezen B1 — Complete Exam Lab',
         short_name: 'Lezen B1',
-        description: 'تدريب تفاعلي على إعادة الصياغة في امتحان Staatsexamen NT2 Programma I.',
+        description: 'تدريب شامل على نماذج Lezen B1 مع النص والأسئلة والاختيارات.',
         lang: 'ar',
         dir: 'rtl',
         display: 'standalone',
@@ -39,7 +39,7 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'nt2-source-pdfs',
-              expiration: { maxEntries: 8, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 90 },
               cacheableResponse: { statuses: [0, 200] }
             }
           }

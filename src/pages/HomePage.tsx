@@ -20,21 +20,20 @@ export function HomePage() {
             <span className="eyebrow"><Sparkles size={15} /> Staatsexamen NT2 · Programma I</span>
             <h1>افهم المعنى، لا تطارد الكلمة نفسها.</h1>
             <p>
-              تدريب متدرج على إعادة الصياغة في Lezen B1: سؤال واحد في كل مرة، لا يظهر الدليل قبل المحاولة،
-              وتُسجَّل الأخطاء والمرادفات التي تحتاج إلى مراجعة.
+              تدريب شامل على Lezen B1: النص موجود داخل الجلسة، ثم يظهر السؤال والاختيارات. لا يظهر الدليل المحدد أو الحل قبل المحاولة، وتُسجَّل الأخطاء للمراجعة.
             </p>
             <div className="hero-modern__actions">
               <Link className="button button--primary button--large" to="/train">
                 ابدأ جلسة من 5 أسئلة <ArrowLeft size={18} aria-hidden="true" />
               </Link>
-              <Link className="button button--secondary button--large" to="/library">
-                افتح مكتبة الأمثلة
+              <Link className="button button--secondary button--large" to="/models">
+                افتح النماذج الكاملة
               </Link>
             </div>
             <div className="hero-modern__metrics" aria-label="ملخص المحتوى">
-              <div><strong>{examples.length}</strong><span>مثالًا موثقًا</span></div>
-              <div><strong>{mcq}</strong><span>بسؤال واختيارات أصلية</span></div>
-              <div><strong>2020–2025</strong><span>نماذج مشمولة</span></div>
+              <div><strong>197+</strong><span>سؤالًا رسميًا مهيكلًا</span></div>
+              <div><strong>2020–2025</strong><span>نماذج رسمية وحديثة</span></div>
+              <div><strong>{examples.length}</strong><span>تحليل إعادة صياغة</span></div>
             </div>
           </div>
 
@@ -75,8 +74,8 @@ export function HomePage() {
           </article>
           <article className="feature-card">
             <span className="feature-card__icon"><BookOpenText /></span>
-            <h3>دليل موثق</h3>
-            <p>بعد الإجابة الصحيحة ترى العبارة من النص، الرابط المعنوي، والصفحة الأصلية داخل ملف الامتحان.</p>
+            <h3>النص قبل السؤال</h3>
+            <p>تقرأ النص كاملًا داخل الجلسة أو تفتح PDF، ثم تختار الإجابة. بعد الصواب يظهر الدليل المحدد والشرح.</p>
           </article>
           <article className="feature-card">
             <span className="feature-card__icon"><Layers3 /></span>

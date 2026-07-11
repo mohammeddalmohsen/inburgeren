@@ -1,0 +1,104 @@
+[
+  {
+    "id": "official-2020",
+    "title": "Openbaar examen Lezen I 2020",
+    "year": 2020,
+    "category": "official-exam",
+    "description": "نموذج رسمي كامل: 7 نصوص و36 سؤالًا مع مفتاح إجابة.",
+    "sourceUrl": "./sources/exam-2020.pdf",
+    "answerUrl": "./sources/answers-2020.pdf",
+    "interactiveModelId": "official-2020",
+    "status": "complete"
+  },
+  {
+    "id": "official-2021",
+    "title": "Openbaar examen Lezen I 2021",
+    "year": 2021,
+    "category": "official-exam",
+    "description": "نموذج رسمي كامل: 7 نصوص و37 سؤالًا مع مفتاح إجابة.",
+    "sourceUrl": "./sources/exam-2021.pdf",
+    "answerUrl": "./sources/answers-2021.pdf",
+    "interactiveModelId": "official-2021",
+    "status": "complete"
+  },
+  {
+    "id": "official-2022",
+    "title": "Openbaar examen Lezen I 2022",
+    "year": 2022,
+    "category": "official-exam",
+    "description": "نموذج رسمي كامل: 6 نصوص و35 سؤالًا مع مفتاح إجابة.",
+    "sourceUrl": "./sources/exam-2022.pdf",
+    "answerUrl": "./sources/answers-2022.pdf",
+    "interactiveModelId": "official-2022",
+    "status": "complete"
+  },
+  {
+    "id": "official-2023",
+    "title": "Openbaar examen Lezen I 2023",
+    "year": 2023,
+    "category": "official-exam",
+    "description": "نموذج رسمي كامل: 6 نصوص و35 سؤالًا مع مفتاح إجابة.",
+    "sourceUrl": "./sources/exam-2023.pdf",
+    "answerUrl": "./sources/answers-2023.pdf",
+    "interactiveModelId": "official-2023",
+    "status": "complete"
+  },
+  {
+    "id": "official-2024",
+    "title": "Openbaar examen Lezen I 2024",
+    "year": 2024,
+    "category": "official-exam",
+    "description": "نموذج رسمي كامل: 6 نصوص و35 سؤالًا مع مفتاح إجابة.",
+    "sourceUrl": "./sources/exam-2024.pdf",
+    "answerUrl": "./sources/answers-2024.pdf",
+    "interactiveModelId": "official-2024",
+    "status": "complete"
+  },
+  {
+    "id": "official-2025",
+    "title": "Openbaar examen Lezen I 2025",
+    "year": 2025,
+    "category": "official-exam",
+    "description": "النص الرسمي كامل ومفتاح الإجابة الرسمي؛ أُدرجت 19 مسألة موثقة لأن ملف الأسئلة الكامل غير موجود ضمن المرفقات.",
+    "sourceUrl": "./sources/exam-2025-text.pdf",
+    "answerUrl": "./sources/answers-2025.pdf",
+    "interactiveModelId": "official-2025",
+    "status": "partial"
+  },
+  {
+    "id": "practice-2025-a",
+    "title": "تدريب Lezen 2025 - المجموعة A",
+    "year": 2025,
+    "category": "practice",
+    "description": "مجموعة نصوص وأسئلة تدريبية حديثة مرفقة. تُفتح كملف PDF كامل.",
+    "sourceUrl": "./sources/practice-2025-a.pdf",
+    "status": "document"
+  },
+  {
+    "id": "practice-2025-b",
+    "title": "تدريب Lezen 2025 - المجموعة B",
+    "year": 2025,
+    "category": "practice",
+    "description": "مجموعة إضافية من النصوص والأسئلة التدريبية الحديثة.",
+    "sourceUrl": "./sources/practice-2025-b.pdf",
+    "status": "document"
+  },
+  {
+    "id": "practice-2025-c",
+    "title": "تدريب Lezen 2025 - المجموعة C",
+    "year": 2025,
+    "category": "practice",
+    "description": "مجموعة تدريبية موسعة تحتوي عدة نصوص وأسئلة.",
+    "sourceUrl": "./sources/practice-2025-c.pdf",
+    "status": "document"
+  },
+  {
+    "id": "reading-techniques",
+    "title": "Technieken Lezen",
+    "year": null,
+    "category": "techniques",
+    "description": "دليل تقنيات القراءة والبحث عن الإجابة داخل النص.",
+    "sourceUrl": "./sources/reading-techniques.pdf",
+    "status": "document"
+  }
+]

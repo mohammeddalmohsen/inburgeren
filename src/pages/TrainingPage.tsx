@@ -11,12 +11,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SourceLink } from '../components/SourceLink';
+import { SourceReader } from '../components/SourceReader';
 import { examples, levelLabels, skillLabels, years } from '../lib/data';
 import { useProgress } from '../lib/ProgressContext';
 import type { Example } from '../lib/schema';
 import { createSessionQueue } from '../lib/search';
 import { useToast } from '../lib/ToastContext';
 import type { SessionRecord } from '../lib/db';
+import { examModels, findSectionForExample } from '../lib/exams';
 
 interface Setup {
   count: number;
@@ -139,6 +141,8 @@ export function TrainingPage() {
   }
 
   const current = queue[index];
+  const sourceSection = findSectionForExample(current.year, current.title);
+  const sourceModel = examModels.find((model) => model.year === current.year);
   return (
     <section className="training-page section shell">
       <div className="training-topline">
@@ -151,7 +155,17 @@ export function TrainingPage() {
       <div className="session-progress" aria-label={`${index + 1} من ${queue.length}`}>
         <span style={{ width: `${((index + 1) / queue.length) * 100}%` }} />
       </div>
-      <TrainingQuestion key={current.id} example={current} onComplete={registerResult} onNext={() => void next()} />
+      <div className="training-reading-note">
+        اقرأ النص أولًا ثم أجب. الدليل المحدد والحل لا يظهران قبل الإجابة الصحيحة.
+      </div>
+      <div className="training-workspace">
+        <SourceReader
+          section={sourceSection}
+          sourceUrl={sourceModel?.sourceUrl ?? current.source.url}
+          title={current.title}
+        />
+        <TrainingQuestion key={current.id} example={current} onComplete={registerResult} onNext={() => void next()} />
+      </div>
     </section>
   );
 }

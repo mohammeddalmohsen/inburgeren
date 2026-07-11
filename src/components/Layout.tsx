@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import {
   BarChart3,
   BookOpenText,
+  Files,
   Download,
   GraduationCap,
   Home,
@@ -17,6 +18,7 @@ import { useToast } from '../lib/ToastContext';
 const navItems = [
   { to: '/home', label: 'الرئيسية', icon: Home },
   { to: '/library', label: 'المكتبة', icon: BookOpenText },
+  { to: '/models', label: 'النماذج', icon: Files },
   { to: '/train', label: 'التدريب', icon: GraduationCap },
   { to: '/progress', label: 'التقدم', icon: BarChart3 },
   { to: '/settings', label: 'الإعدادات', icon: Settings },
@@ -93,7 +95,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <span className="brand__mark">NT2</span>
             <span className="brand__copy">
               <strong>Lezen B1</strong>
-              <small>Parafrase Lab</small>
+              <small>Exam & Parafrase Lab</small>
             </span>
           </NavLink>
 
@@ -146,7 +148,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <div className="shell footer__inner">
           <div>
             <strong>NT2 Lezen B1 · Parafrase Lab</strong>
-            <p>أداة تدريب شخصية مبنية فقط على النماذج المرفقة. ليست موقعًا رسميًا للامتحان.</p>
+            <p>أداة تدريب شاملة للنماذج المرفقة مع عرض النص قبل السؤال. ليست موقعًا رسميًا للامتحان.</p>
           </div>
           <p className="local-note">يُحفظ تقدمك محليًا في هذا المتصفح، ويمكن تصديره من الإعدادات.</p>
         </div>
