@@ -1,7 +1,9 @@
 import { ArrowLeft, BookOpenCheck, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { publicAssetUrl } from '../lib/assetUrl';
-import { examModelById, sourceDocuments } from '../lib/exams';
+import { examModelById, examModels, sourceDocuments } from '../lib/exams';
+import { examples } from '../lib/data';
+import { paraphrasePairs } from '../lib/paraphrasePairs';
 import { usePageMeta } from '../lib/pageMeta';
 
 export function ModelsPage() {
@@ -10,25 +12,25 @@ export function ModelsPage() {
   // تعرض صفحة النماذج الامتحانات الرسمية فقط. المواد الإضافية أو المستندات
   // المضافة بالخطأ لا تدخل هذه الصفحة حتى لو بقيت في مكتبة المصادر.
   const officialDocuments = sourceDocuments.filter((doc) => doc.category === 'official-exam');
+  const officialQuestions = examModels.reduce((sum, model) => sum + model.questionCount, 0);
 
   return (
     <section className="section shell models-page">
       <div className="page-heading">
         <div>
-          <span className="section-kicker">كل النماذج الرسمية في مكان واحد</span>
+          <span className="section-kicker">النماذج الرسمية الحديثة</span>
           <h1>نماذج Lezen الرسمية</h1>
           <p>
-            النماذج الرسمية 2020–2025 متاحة كتدريب تفاعلي كامل من حيث السؤال والاختيارات ومفتاح الإجابة الرسمي.
-            لا تُضاف أسئلة أو اختيارات أو أدلة غير موجودة في ملفات المصدر.
+            النماذج الرسمية 2023 و2024 و2025 متاحة كتدريب تفاعلي كامل من حيث النص والسؤال والاختيارات ومفتاح الإجابة الرسمي. لا تُضاف معلومات من خارج ملفات المصدر.
           </p>
         </div>
       </div>
 
       <div className="coverage-banner">
-        <div><strong>178</strong><span>سؤالًا رسميًا موثقًا 2020–2024</span></div>
-        <div><strong>35/35</strong><span>تغطية 2025 التفاعلية</span></div>
-        <div><strong>90</strong><span>أمثلة مكتبة إعادة الصياغة</span></div>
-        <div><strong>النص ظاهر</strong><span>قبل الاختيار، وليس بعده</span></div>
+        <div><strong>{officialQuestions}</strong><span>سؤالًا رسميًا في 3 نماذج</span></div>
+        <div><strong>35/35</strong><span>لكل سنة: 2023 و2024 و2025</span></div>
+        <div><strong>{examples.length}</strong><span>مثالًا في مكتبة إعادة الصياغة</span></div>
+        <div><strong>{paraphrasePairs.length}</strong><span>علاقة لغوية في لعبة المعنى</span></div>
       </div>
 
       <section className="model-group">

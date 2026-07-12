@@ -99,7 +99,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <span className="brand__mark">NT2</span>
             <span className="brand__copy">
               <strong>Lezen B1</strong>
-              <small>Exam & Parafrase Lab</small>
+              <small>Official Exams 2023–2025</small>
             </span>
           </NavLink>
 
@@ -152,7 +152,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <div className="shell footer__inner">
           <div>
             <strong>NT2 Lezen B1 · Parafrase Lab</strong>
-            <p>أداة تدريب للنماذج المرفقة مع عرض النص قبل السؤال. ليست موقعًا رسميًا للامتحان.</p>
+            <p>أداة تدريب غير رسمية مخصصة لنماذج Lezen I للأعوام 2023 و2024 و2025.</p>
           </div>
           <p className="local-note">يُحفظ تقدمك محليًا في هذا المتصفح، ويمكن تصديره من الإعدادات.</p>
         </div>

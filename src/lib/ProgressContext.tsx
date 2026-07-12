@@ -21,6 +21,8 @@ import {
   type ProgressRecord,
   type SessionRecord,
 } from './db';
+import { examples } from './data';
+import { examModels } from './exams';
 
 interface AnswerUpdate {
   correct: boolean;
@@ -46,6 +48,8 @@ interface ProgressContextValue {
 }
 
 const ProgressContext = createContext<ProgressContextValue | null>(null);
+const supportedExampleIds = new Set(examples.map((example) => example.id));
+const supportedModelIds = new Set(examModels.map((model) => model.id));
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
@@ -54,8 +58,8 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   const reload = useCallback(async () => {
     const [progressRows, sessionRows] = await Promise.all([getAllProgress(), getSessions()]);
-    setProgress(progressRows);
-    setSessions(sessionRows);
+    setProgress(Object.fromEntries(Object.entries(progressRows).filter(([id]) => supportedExampleIds.has(id))));
+    setSessions(sessionRows.filter((session) => session.exampleIds.length > 0 && session.exampleIds.every((id) => supportedExampleIds.has(id))));
     setReady(true);
   }, []);
 
@@ -137,7 +141,15 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   const downloadBackup = useCallback(async () => {
     const snapshot = await exportSnapshot();
-    const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: 'application/json' });
+    const scopedSnapshot = {
+      ...snapshot,
+      progress: snapshot.progress.filter((record) => supportedExampleIds.has(record.exampleId)),
+      sessions: snapshot.sessions.filter((session) => session.exampleIds.length > 0 && session.exampleIds.every((id) => supportedExampleIds.has(id))),
+      examSessions: snapshot.examSessions.filter((session) => supportedModelIds.has(session.modelId)),
+      trainingSessions: snapshot.trainingSessions.filter((session) => session.questionIds.length > 0 && session.questionIds.every((id) => supportedExampleIds.has(id))),
+      unknownWords: snapshot.unknownWords.filter((item) => supportedExampleIds.has(item.exampleId)),
+    };
+    const blob = new Blob([JSON.stringify(scopedSnapshot, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;

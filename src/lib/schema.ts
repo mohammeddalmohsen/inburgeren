@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+export const SupportedYearSchema = z.union([z.literal(2023), z.literal(2024), z.literal(2025)]);
+
 export const OptionSchema = z.object({
   label: z.enum(['A', 'B', 'C', 'D']),
   text: z.string().min(1),
@@ -9,7 +11,7 @@ export const EvidenceStatusSchema = z.enum(['documented', 'answer-key-only', 'mi
 
 export const ExampleSchema = z.object({
   id: z.string().min(1),
-  year: z.number().int().min(2020).max(2030),
+  year: SupportedYearSchema,
   questionNo: z.number().int().positive(),
   sectionId: z.string().min(1).optional(),
   title: z.string().min(1),
@@ -67,7 +69,7 @@ export const ExamSectionSchema = z.object({
 
 export const ExamModelSchema = z.object({
   id: z.string().min(1),
-  year: z.number().int().min(2020).max(2030),
+  year: SupportedYearSchema,
   title: z.string().min(1),
   kind: z.literal('official'),
   status: z.enum(['complete', 'partial']),
@@ -84,8 +86,8 @@ export const ExamModelsSchema = z.array(ExamModelSchema).min(1);
 export const SourceDocumentSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
-  year: z.number().int().min(2020).max(2030).nullable(),
-  category: z.enum(['official-exam', 'practice', 'collection']),
+  year: SupportedYearSchema.nullable(),
+  category: z.literal('official-exam'),
   description: z.string().min(1),
   sourceUrl: z.string().min(1),
   answerUrl: z.string().min(1).optional(),

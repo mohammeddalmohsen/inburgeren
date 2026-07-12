@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { examples, skillLabels } from '../lib/data';
 import { useProgress } from '../lib/ProgressContext';
 import { paraphrasePairs } from '../lib/paraphrasePairs';
+import { examModels } from '../lib/exams';
 import { usePageMeta } from '../lib/pageMeta';
 
 export function HomePage() {
@@ -12,7 +13,7 @@ export function HomePage() {
   const mastered = rows.filter((row) => row.mastered).length;
   const review = rows.filter((row) => row.review).length;
   const answered = rows.filter((row) => row.attempts > 0).length;
-  const mcq = examples.filter((example) => example.mode === 'multiple-choice').length;
+  const officialQuestions = examModels.reduce((sum, model) => sum + model.questionCount, 0);
 
   return (
     <>
@@ -37,8 +38,8 @@ export function HomePage() {
               </Link>
             </div>
             <div className="hero-modern__metrics" aria-label="ملخص المحتوى">
-              <div><strong>213</strong><span>سؤالًا رسميًا مهيكلًا</span></div>
-              <div><strong>2020–2025</strong><span>نماذج رسمية كاملة</span></div>
+              <div><strong>{officialQuestions}</strong><span>سؤالًا رسميًا مهيكلًا</span></div>
+              <div><strong>2023–2025</strong><span>3 نماذج رسمية كاملة</span></div>
               <div><strong>{paraphrasePairs.length}</strong><span>علاقة لغوية للتدريب اليومي</span></div>
             </div>
           </div>
@@ -81,13 +82,13 @@ export function HomePage() {
           </article>
           <article className="feature-card">
             <span className="feature-card__icon"><BookOpenText /></span>
-            <h3>النص قبل السؤال</h3>
-            <p>تقرأ النص كاملًا داخل الجلسة أو تفتح PDF، ثم تختار الإجابة. بعد الصواب يظهر الدليل المحدد والشرح.</p>
+            <h3>السؤال أولًا والبحث الذكي</h3>
+            <p>ابدأ بالسؤال والاختيارات، وحدد كلمة البحث، ثم اقرأ الجزء المرتبط بالسؤال. لا تحتاج إلى قراءة النص كلمةً كلمة.</p>
           </article>
           <article className="feature-card">
             <span className="feature-card__icon"><Layers3 /></span>
-            <h3>مراجعة ذكية</h3>
-            <p>تُجمع الأخطاء حسب نوع التحويل، وتظهر مراجعة قصيرة بعد كل خمسة أسئلة.</p>
+            <h3>مراجعة دورية</h3>
+            <p>في الجلسات الأطول تظهر وقفة بعد كل خمسة أسئلة، وتعرض الأخطاء وأنواع التحويل التي تحتاج إلى انتباه.</p>
           </article>
         </div>
       </section>

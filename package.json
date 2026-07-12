@@ -1,7 +1,7 @@
 {
-  "name": "nt2-lezen-b1-comprehensive",
+  "name": "nt2-lezen-b1-2023-2025",
   "private": true,
-  "version": "4.0.0",
+  "version": "4.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",

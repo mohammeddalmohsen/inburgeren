@@ -75,8 +75,17 @@ export function TrainingPage() {
   }), [setup]);
 
   useEffect(() => {
+    const supportedIds = new Set(examples.map((example) => example.id));
     getActiveTrainingSession()
-      .then((saved) => setPendingTrainingSession(saved ?? null))
+      .then(async (saved) => {
+        if (saved && saved.questionIds.some((id) => !supportedIds.has(id))) {
+          await abandonTrainingSession(saved);
+          setPendingTrainingSession(null);
+          showToast('أُرشفت جلسة قديمة لأنها لا تنتمي إلى نطاق 2023–2025.', 'info');
+          return;
+        }
+        setPendingTrainingSession(saved ?? null);
+      })
       .catch(() => showToast('تعذر قراءة جلسة التدريب المحفوظة من IndexedDB.', 'warning'));
   }, [showToast]);
 

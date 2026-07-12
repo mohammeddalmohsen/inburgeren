@@ -6,15 +6,16 @@ declare const process: { env: Record<string, string | undefined> };
 
 export default defineConfig({
   base: '/inburgeren/',
+  publicDir: 'public-site',
   plugins: [
     react(),
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['icon-192.png', 'icon-512.png', 'maskable-512.png'],
       manifest: {
-        name: 'NT2 Lezen B1 — Documented Exam Lab',
+        name: 'NT2 Lezen B1 — Exam Lab 2023–2025',
         short_name: 'Lezen B1',
-        description: 'تدريب موثق على نماذج Lezen B1 مع النص والأسئلة والاختيارات المتاحة رسميًا.',
+        description: 'تدريب موثق على نماذج Lezen B1 الرسمية للأعوام 2023 و2024 و2025.',
         lang: 'ar',
         dir: 'rtl',
         display: 'standalone',
@@ -30,6 +31,7 @@ export default defineConfig({
         ]
       },
       workbox: {
+        cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2}'],
         maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
         runtimeCaching: [
@@ -42,7 +44,7 @@ export default defineConfig({
             urlPattern: ({ url }) => url.pathname.endsWith('.pdf'),
             handler: 'CacheFirst',
             options: {
-              cacheName: 'nt2-source-pdfs',
+              cacheName: 'nt2-source-pdfs-2023-2025-v1',
               expiration: { maxEntries: 8, maxAgeSeconds: 60 * 60 * 24 * 30 },
               cacheableResponse: { statuses: [0, 200] }
             }

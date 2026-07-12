@@ -1,15 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import { ExamModelsSchema } from './schema';
 import { examModels, findSectionForExample, normalizeTitle, sourceDocuments } from './exams';
+import { examples } from './data';
 
 describe('exam model data', () => {
-  it('contains the official years 2020 through 2025', () => {
-    expect(examModels.map((model) => model.year)).toEqual([2020, 2021, 2022, 2023, 2024, 2025]);
+  it('contains only the official years 2023 through 2025', () => {
+    expect(examModels.map((model) => model.year)).toEqual([2023, 2024, 2025]);
   });
 
-  it('contains every official question for 2020 through 2025', () => {
+  it('contains all 105 official questions for 2023 through 2025', () => {
     const complete = examModels.filter((model) => model.status === 'complete');
-    expect(complete.reduce((sum, model) => sum + model.questionCount, 0)).toBe(213);
+    expect(complete.reduce((sum, model) => sum + model.questionCount, 0)).toBe(105);
+    expect(complete.every((model) => model.questionCount === 35)).toBe(true);
   });
 
   it('keeps every complete-model answer inside its displayed options', () => {
@@ -23,15 +25,16 @@ describe('exam model data', () => {
     }
   });
 
-  it('links known shortened training titles to the correct full source sections', () => {
-    expect(findSectionForExample(2020, 'Gebruik van schoolcomputers', '2020-s2')?.title).toBe('Gebruik van schoolcomputers : huis- en gedragsregels');
-    expect(findSectionForExample(2022, 'Zelf je rooster maken', '2022-s4')?.title).toBe('Zelf je rooster maken: een goed idee of niet?');
+  it('links every curated example to its official source section', () => {
+    for (const example of examples) {
+      expect(findSectionForExample(example.year, example.title, example.sectionId)?.id).toBe(example.sectionId);
+    }
   });
 
   it('does not choose a section when normalized matching is ambiguous', () => {
-    const normalized = normalizeTitle('Zelf je rooster maken: een goed idee of niet?');
-    expect(normalized).toBe(normalizeTitle('Zelf je rooster maken'));
-    expect(findSectionForExample(2099, 'Zelf je rooster maken')).toBeNull();
+    const normalized = normalizeTitle('Voorbeeld: een goed idee of niet?');
+    expect(normalized).toBe(normalizeTitle('Voorbeeld'));
+    expect(findSectionForExample(2025, 'Titel die niet bestaat')).toBeNull();
   });
 
   it('has unique question ids and numbers inside every model', () => {
@@ -90,10 +93,10 @@ describe('exam model data', () => {
 
   it('keeps the models page source list limited to official exams and excludes reading-technique material', () => {
     const official = sourceDocuments.filter((document) => document.category === 'official-exam');
-    expect(official).toHaveLength(6);
+    expect(official).toHaveLength(3);
     for (const document of sourceDocuments) {
       const searchable = `${document.id} ${document.title} ${document.description}`.toLocaleLowerCase();
-      expect(searchable).not.toMatch(/technieken|techniques|تقنيات القراءة/);
+      expect(searchable).not.toMatch(/technieken|techniques|تقنيات القراءة|2020|2021|2022|practice/);
     }
   });
 

@@ -11,7 +11,7 @@ export function SourcesPage() {
         <div>
           <span className="section-kicker">شفافية المحتوى</span>
           <h1>المصادر وحقوق الاستخدام</h1>
-          <p>هذا الموقع أداة تدريب غير رسمية لقراءة NT2 B1. الملفات الأصلية والامتحانات ومفاتيح الإجابة تعود لأصحابها، ويجب على المستخدم التحقق من شروط إعادة النشر والاستخدام من المصدر الرسمي.</p>
+          <p>هذا الموقع أداة تدريب غير رسمية مخصصة للنماذج الرسمية 2023 و2024 و2025. الملفات الأصلية ومفاتيح الإجابة تعود لأصحابها، ويجب التحقق من شروط الاستخدام من المصدر الرسمي.</p>
         </div>
       </div>
 
@@ -24,7 +24,7 @@ export function SourcesPage() {
       </section>
 
       <div className="source-rights-list">
-        {sourceDocuments.filter((doc) => doc.category !== 'practice').map((doc) => (
+        {sourceDocuments.map((doc) => (
           <article className="source-rights-card" key={doc.id}>
             <div>
               <span className="chip">{doc.year ?? 'عام'}</span>

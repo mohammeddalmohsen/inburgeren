@@ -1,42 +1,6 @@
 {
   "rows": [
     {
-      "year": 2020,
-      "sections": 7,
-      "questions": 36,
-      "declared": 36,
-      "official": 36,
-      "status": "complete",
-      "documented": 0,
-      "answerKeyOnly": 36,
-      "missingSource": 0,
-      "coverage": 0
-    },
-    {
-      "year": 2021,
-      "sections": 7,
-      "questions": 37,
-      "declared": 37,
-      "official": 37,
-      "status": "complete",
-      "documented": 0,
-      "answerKeyOnly": 37,
-      "missingSource": 0,
-      "coverage": 0
-    },
-    {
-      "year": 2022,
-      "sections": 6,
-      "questions": 35,
-      "declared": 35,
-      "official": 35,
-      "status": "complete",
-      "documented": 0,
-      "answerKeyOnly": 35,
-      "missingSource": 0,
-      "coverage": 0
-    },
-    {
       "year": 2023,
       "sections": 6,
       "questions": 35,
@@ -74,14 +38,14 @@
     }
   ],
   "totals": {
-    "models": 6,
-    "sections": 38,
-    "questions": 213,
-    "examples": 90,
-    "multipleChoiceExamples": 90,
+    "models": 3,
+    "sections": 18,
+    "questions": 105,
+    "examples": 50,
+    "multipleChoiceExamples": 50,
     "documented": 0,
-    "answerKeyOnly": 213,
+    "answerKeyOnly": 105,
     "missingSource": 0,
-    "pdfDocuments": 9
+    "pdfDocuments": 3
   }
 }

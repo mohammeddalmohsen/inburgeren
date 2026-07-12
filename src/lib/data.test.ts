@@ -1,25 +1,19 @@
 import { describe, expect, it } from 'vitest';
 import { examples } from './data';
 
-describe('curated exam data', () => {
-  it('contains all 90 curated examples', () => {
-    expect(examples).toHaveLength(90);
+describe('curated exam data 2023-2025', () => {
+  it('contains the 50 curated examples from 2023, 2024 and 2025 only', () => {
+    expect(examples).toHaveLength(50);
+    expect([...new Set(examples.map((item) => item.year))]).toEqual([2023, 2024, 2025]);
   });
 
-  it('has original multiple-choice options for curated 2020-2025 examples', () => {
-    const multipleChoice = examples.filter((item) => item.mode === 'multiple-choice');
-    const selfCheck = examples.filter((item) => item.mode === 'self-check');
-    expect(multipleChoice).toHaveLength(90);
-    expect(selfCheck).toHaveLength(0);
+  it('uses original multiple-choice options for every curated example', () => {
+    expect(examples.every((item) => item.mode === 'multiple-choice')).toBe(true);
+    expect(examples.every((item) => item.options.length >= 2 && Boolean(item.correctOption))).toBe(true);
   });
 
-  it('links every item to an evidence page', () => {
+  it('links every item to an evidence page and stable section id', () => {
     expect(examples.every((item) => item.source.evidencePage)).toBe(true);
-  });
-
-  it('links every curated example to a stable exam section id', () => {
     expect(examples.every((item) => item.sectionId)).toBe(true);
-    expect(examples.find((item) => item.year === 2020 && item.questionNo === 6)?.sectionId).toBe('2020-s2');
-    expect(examples.find((item) => item.year === 2022 && item.questionNo === 17)?.sectionId).toBe('2022-s4');
   });
 });

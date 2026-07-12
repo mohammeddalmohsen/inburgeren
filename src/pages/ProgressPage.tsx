@@ -40,7 +40,8 @@ export function ProgressPage() {
     return row.unknownWords.map((word) => ({ word, example }));
   });
 
-  const completedExamSessions = useMemo(() => examSessions.filter((session) => session.completed && !session.abandoned), [examSessions]);
+  const supportedModelIds = useMemo(() => new Set(examModels.map((model) => model.id)), []);
+  const completedExamSessions = useMemo(() => examSessions.filter((session) => supportedModelIds.has(session.modelId) && session.completed && !session.abandoned), [examSessions, supportedModelIds]);
   const examRows = completedExamSessions.map((session) => {
     const model = examModels.find((item) => item.id === session.modelId);
     const section = session.sectionId === 'all' ? null : model?.sections.find((item) => item.id === session.sectionId);

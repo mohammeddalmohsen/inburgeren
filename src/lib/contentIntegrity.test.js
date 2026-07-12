@@ -1,20 +1,23 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { buildPageTitle } from './pageMeta.ts';
 import { examModels, sourceDocuments } from './exams.ts';
 
 describe('final content integrity', () => {
-  it('keeps generated documentation free from stale 2025 partial numbers', () => {
+  it('keeps documentation scoped to 2023-2025 without legacy model claims', () => {
     const files = ['README_AR.md', 'CONTENT_STATUS_AR.md', 'CONTENT_EVIDENCE_COVERAGE_AR.md', 'AUDIT_FIXES_AR.md'];
     const text = files.map((file) => readFileSync(file, 'utf8')).join('\n');
-    expect(text).not.toMatch(/19 من أصل 35|19 من 35|197 مسألة|197 سؤال/);
+    expect(text).not.toMatch(/2020|2021|2022|213 سؤال|90 مثال/);
+    expect(text).toMatch(/2023/);
+    expect(text).toMatch(/2024/);
+    expect(text).toMatch(/2025/);
   });
 
   it('has every declared source PDF on disk', () => {
     for (const doc of sourceDocuments) {
       if (!doc.sourceUrl.endsWith('.pdf')) continue;
-      expect(existsSync(join(process.cwd(), 'public', doc.sourceUrl.replace(/^\.\//, '')))).toBe(true);
+      expect(existsSync(join(process.cwd(), 'public-site', doc.sourceUrl.replace(/^\.\//, '')))).toBe(true);
     }
   });
 
@@ -28,5 +31,18 @@ describe('final content integrity', () => {
 
   it('builds route metadata titles consistently', () => {
     expect(buildPageTitle('نموذج 2025')).toBe('NT2 Lezen B1 — نموذج 2025');
+  });
+});
+
+
+describe('scoped public assets', () => {
+  it('does not ship legacy or practice PDFs', () => {
+    const sourceDir = join(process.cwd(), 'public-site', 'sources');
+    const names = readdirSync(sourceDir);
+    expect(names.some((name) => /2020|2021|2022|practice/i.test(name))).toBe(false);
+    expect(names.sort()).toEqual([
+      'answers-2023.pdf', 'answers-2024.pdf', 'answers-2025.pdf',
+      'exam-2023.pdf', 'exam-2024.pdf', 'exam-2025-complete.pdf',
+    ]);
   });
 });
