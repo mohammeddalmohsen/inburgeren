@@ -88,6 +88,15 @@ describe('exam model data', () => {
     }
   });
 
+  it('keeps the models page source list limited to official exams and excludes reading-technique material', () => {
+    const official = sourceDocuments.filter((document) => document.category === 'official-exam');
+    expect(official).toHaveLength(6);
+    for (const document of sourceDocuments) {
+      const searchable = `${document.id} ${document.title} ${document.description}`.toLocaleLowerCase();
+      expect(searchable).not.toMatch(/technieken|techniques|تقنيات القراءة/);
+    }
+  });
+
   it('rejects a broken exam model with Zod', () => {
     const result = ExamModelsSchema.safeParse([{ id: 'broken', sections: [] }]);
     expect(result.success).toBe(false);
