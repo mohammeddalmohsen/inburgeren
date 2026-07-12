@@ -8,7 +8,7 @@ describe('exam model data', () => {
   });
 
   it('contains every official question for 2020 through 2024', () => {
-    const complete = examModels.filter((model) => model.status === 'complete');
+    const complete = examModels.filter((model) => model.status === 'complete' && model.year <= 2024);
     expect(complete.reduce((sum, model) => sum + model.questionCount, 0)).toBe(178);
   });
 
@@ -52,12 +52,12 @@ describe('exam model data', () => {
     }
   });
 
-  it('marks 2025 as a partial model with 19 documented questions from 35 official questions', () => {
+  it('marks 2025 as a complete interactive model after adding the official question booklet', () => {
     const model2025 = examModels.find((model) => model.year === 2025);
-    expect(model2025?.status).toBe('partial');
-    expect(model2025?.questionCount).toBe(19);
+    expect(model2025?.status).toBe('complete');
+    expect(model2025?.questionCount).toBe(35);
     expect(model2025?.officialQuestionCount).toBe(35);
-    expect(model2025?.statusNote).toBeTruthy();
+    expect(model2025?.sections.flatMap((section) => section.questions)).toHaveLength(35);
   });
 
   it('rejects a broken exam model with Zod', () => {

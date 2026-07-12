@@ -6,12 +6,11 @@ describe('curated exam data', () => {
     expect(examples).toHaveLength(90);
   });
 
-  it('has original multiple-choice options for 2020–2024 and explicit self-check for 2025', () => {
+  it('has original multiple-choice options for curated 2020-2025 examples', () => {
     const multipleChoice = examples.filter((item) => item.mode === 'multiple-choice');
     const selfCheck = examples.filter((item) => item.mode === 'self-check');
-    expect(multipleChoice).toHaveLength(71);
-    expect(selfCheck).toHaveLength(19);
-    expect(selfCheck.every((item) => item.year === 2025)).toBe(true);
+    expect(multipleChoice).toHaveLength(90);
+    expect(selfCheck).toHaveLength(0);
   });
 
   it('links every item to an evidence page', () => {

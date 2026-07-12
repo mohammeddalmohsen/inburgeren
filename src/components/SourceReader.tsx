@@ -49,8 +49,10 @@ export function SourceReader({ section, sourceUrl, title, compact = false }: Sou
         </div>
       ) : (
         <div className="source-reader__pdf">
-          <iframe src={pdfUrl} title={`PDF: ${title}`} loading="lazy" />
-          <p className="pdf-fallback">إذا لم يظهر PDF على هاتفك، استخدم زر «فتح» أعلى اللوحة.</p>
+          <iframe key={pdfUrl} src={pdfUrl} title={`PDF: ${title}`} loading="lazy" />
+          <a className="pdf-fallback" href={pdfUrl} target="_blank" rel="noreferrer">
+            إذا لم يظهر PDF على هاتفك، اضغط هنا لفتحه في نافذة جديدة.
+          </a>
         </div>
       )}
     </aside>

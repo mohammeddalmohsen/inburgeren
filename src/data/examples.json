@@ -2759,10 +2759,23 @@
     "questionNo": 1,
     "title": "Ruud wordt rij-instructeur",
     "question": "Wat voor organisatie is Jeurissen?",
-    "answer": "C. het bedrijf waar Ruud momenteel als timmerman werkt.",
+    "answer": "C. het bedrijf waar Ruud momenteel als timmerman werkt",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "de instelling waar Ruud zijn opleiding tot rij-instructeur volgt"
+      },
+      {
+        "label": "B",
+        "text": "de rijschool waar Ruud binnenkort zal gaan werken"
+      },
+      {
+        "label": "C",
+        "text": "het bedrijf waar Ruud momenteel als timmerman werkt"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "werkgever Jeurissen … Ruud is timmerman … Op dit moment",
     "pair": "werkgever ↔ bedrijf waar hij werkt; op dit moment ↔ momenteel",
     "meaning": "Jeurissen هي الشركة التي يعمل فيها Ruud حاليًا نجارًا",
@@ -2772,7 +2785,7 @@
     "explanation": "يجب ربط كلمة werkgever بالمهنة المذكورة، لا بمكان الدراسة.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 2,
       "questionPage": null
     },
@@ -2786,8 +2799,21 @@
     "question": "Wat vindt Ruud van medische onderzoeken in de bouwsector?",
     "answer": "A. Hij vindt de onderzoeken bijzonder nuttig voor mensen die zwaar werk doen.",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hij vindt de onderzoeken bijzonder nuttig voor mensen die zwaar werk doen."
+      },
+      {
+        "label": "B",
+        "text": "Hij vindt het lastig dat jonge werknemers niet vaak genoeg onderzocht worden."
+      },
+      {
+        "label": "C",
+        "text": "Hij vindt medische onderzoeken minder belangrijk dan adviesgesprekken."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Ruud vindt het een goede zaak … Dat geldt zeker voor de zware beroepen.",
     "pair": "een goede zaak / zeker voor zware beroepen ↔ bijzonder nuttig voor mensen die zwaar werk doen",
     "meaning": "يرى الفحوص مفيدة خصوصًا لأصحاب الأعمال الشاقة",
@@ -2797,7 +2823,7 @@
     "explanation": "een goede zaak أعيدت بـ nuttig، و zware beroepen بـ zwaar werk.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 2,
       "questionPage": null
     },
@@ -2809,10 +2835,23 @@
     "questionNo": 3,
     "title": "Ruud wordt rij-instructeur",
     "question": "Wat wil Ruud duidelijk maken met het voorbeeld van zijn collega van 35 jaar?",
-    "answer": "C. dat mensen zware beroepen soms niet lang kunnen uitoefenen.",
+    "answer": "C. dat mensen zware beroepen soms niet lang kunnen uitoefenen",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "dat er mensen zijn die geen ander werk kunnen vinden"
+      },
+      {
+        "label": "B",
+        "text": "dat mensen beter geen beroep in de bouw kunnen kiezen"
+      },
+      {
+        "label": "C",
+        "text": "dat mensen zware beroepen soms niet lang kunnen uitoefenen"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Hij moet nog zeker 30 jaar, maar houdt dat in dit beroep waarschijnlijk niet vol.",
     "pair": "niet volhouden ↔ niet lang kunnen uitoefenen",
     "meaning": "قد لا يستطيع الاستمرار طويلًا في مهنة شاقة",
@@ -2822,7 +2861,7 @@
     "explanation": "een beroep niet volhouden يعني عدم القدرة على ممارسته مدة طويلة.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 2,
       "questionPage": null
     },
@@ -2836,8 +2875,21 @@
     "question": "Wat vindt Ruud ervan dat hij nieuwe dingen moet leren tijdens zijn omscholing?",
     "answer": "A. Het is even volhouden, maar met hard werken lukt het hem.",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Het is even volhouden, maar met hard werken lukt het hem."
+      },
+      {
+        "label": "B",
+        "text": "Het is lang geleden dat hij moest leren, maar hij vindt het makkelijk."
+      },
+      {
+        "label": "C",
+        "text": "Hij vindt het leuk, maar hij vindt zichzelf er eigenlijk te oud voor."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "als je heel goed je best doet, lukt het echt wel",
     "pair": "heel goed je best doen ↔ hard werken; lukt het echt wel ↔ lukt het hem",
     "meaning": "إذا اجتهد كثيرًا فسينجح",
@@ -2847,7 +2899,7 @@
     "explanation": "هذه إعادة الصياغة النموذجية: لا توجد الكلمات نفسها تقريبًا لكن المعنى مطابق.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 2,
       "questionPage": null
     },
@@ -2861,8 +2913,21 @@
     "question": "Waarin verschilt Ruud van andere mensen met een zwaar beroep, volgens Joke Hermans?",
     "answer": "C. Ruud is zelf in actie gekomen om ander werk te vinden.",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ruud heeft vrij lang gewacht voor hij zich liet omscholen."
+      },
+      {
+        "label": "B",
+        "text": "Ruud is later dan gemiddeld begonnen met zijn beroep."
+      },
+      {
+        "label": "C",
+        "text": "Ruud is zelf in actie gekomen om ander werk te vinden."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Ruud nam het initiatief … zelf … regie pakt … anderen zijn afwachtend",
     "pair": "zelf initiatief nemen / regie pakken ↔ zelf in actie komen",
     "meaning": "Ruud بدأ بنفسه واتخذ خطوة لتغيير عمله",
@@ -2872,7 +2937,7 @@
     "explanation": "ثلاث عبارات في النص تقابل عبارة واحدة في الخيار.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 2,
       "questionPage": null
     },
@@ -2886,8 +2951,21 @@
     "question": "Wat is het verschil tussen dieren en mensen als het om huilen gaat?",
     "answer": "C. Mensen huilen door positieve of negatieve gevoelens, dieren doen dat niet.",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Bij pijnlijke ogen maken mensen veel sneller traanvocht aan dan dieren."
+      },
+      {
+        "label": "B",
+        "text": "Dieren huilen alleen bij lichamelijke pijn, mensen ook bij vervelende ervaringen."
+      },
+      {
+        "label": "C",
+        "text": "Mensen huilen door positieve of negatieve gevoelens, dieren doen dat niet."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "alleen mensen huilen van emotie … verdriet, woede … geluk en vreugde",
     "pair": "emoties positief en negatief ↔ positieve of negatieve gevoelens; dieren niet",
     "meaning": "الإنسان يبكي من مشاعر إيجابية أو سلبية، والحيوان لا يفعل ذلك",
@@ -2897,7 +2975,7 @@
     "explanation": "الخيار يجمع أمثلة المشاعر تحت فئتين عامتين.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 4,
       "questionPage": null
     },
@@ -2911,8 +2989,21 @@
     "question": "Wat zegt de schrijver over pasgeboren baby's die huilen?",
     "answer": "A. Bij hen heeft huilen dezelfde functie als bij huilende volwassenen.",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Bij hen heeft huilen dezelfde functie als bij huilende volwassenen."
+      },
+      {
+        "label": "B",
+        "text": "Voor hen heeft huilen meer nut dan wanneer volwassenen huilen."
+      },
+      {
+        "label": "C",
+        "text": "Zij worden als ze in het openbaar huilen sneller getroost door hun ouders."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Gedragswetenschappers geven aan dat huilen bij volwassenen ook die functie heeft.",
     "pair": "ook die functie ↔ dezelfde functie als bij volwassenen",
     "meaning": "لبكاء الرضع والبالغين وظيفة تواصلية متشابهة",
@@ -2922,7 +3013,7 @@
     "explanation": "لفهم die functie يجب الرجوع إلى وظيفة بكاء الطفل في الجملة السابقة.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 4,
       "questionPage": null
     },
@@ -2936,8 +3027,21 @@
     "question": "Wat voor functie hebben gelukshormonen, volgens de tekst?",
     "answer": "C. Ze zorgen ervoor dat je rustiger wordt.",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ze helpen lichamelijke pijn te verminderen."
+      },
+      {
+        "label": "B",
+        "text": "Ze verwijderen endorfine uit het lichaam."
+      },
+      {
+        "label": "C",
+        "text": "Ze zorgen ervoor dat je rustiger wordt."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "endorfinen, die je kalm maken",
     "pair": "kalm maken ↔ zorgen dat je rustiger wordt",
     "meaning": "هرمونات السعادة تجعلك أكثر هدوءًا",
@@ -2947,7 +3051,7 @@
     "explanation": "kalm و rustig مترادفتان هنا.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 5,
       "questionPage": null
     },
@@ -2959,10 +3063,23 @@
     "questionNo": 12,
     "title": "Een potje huilen",
     "question": "Wat is het doel van deze tekst?",
-    "answer": "A. de lezer informeren over verschillende feiten over huilen.",
+    "answer": "A. de lezer informeren over verschillende feiten over huilen",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "de lezer informeren over verschillende feiten over huilen"
+      },
+      {
+        "label": "B",
+        "text": "de lezer vertellen wanneer het gepast is om te huilen"
+      },
+      {
+        "label": "C",
+        "text": "de lezer waarschuwen voor de effecten van huilen"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Lees verder voor een paar leuke weetjes over huilen",
     "pair": "weetjes ↔ verschillende feiten",
     "meaning": "معلومات وحقائق متنوعة عن البكاء",
@@ -2972,7 +3089,7 @@
     "explanation": "weetjes هي حقائق أو معلومات قصيرة.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 4,
       "questionPage": null
     },
@@ -2984,10 +3101,23 @@
     "questionNo": 13,
     "title": "Verkopen is een vak",
     "question": "Een klant komt een kledingwinkel binnen. De verkoper groet de klant. Wanneer kan de verkoper het beste naar de klant toe gaan om hem te helpen?",
-    "answer": "A. nadat de klant heeft laten merken dat hij hulp wil.",
+    "answer": "A. nadat de klant heeft laten merken dat hij hulp wil",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "nadat de klant heeft laten merken dat hij hulp wil"
+      },
+      {
+        "label": "B",
+        "text": "nadat de klant zelf om hulp heeft gevraagd"
+      },
+      {
+        "label": "C",
+        "text": "zo snel mogelijk nadat de klant is binnengekomen"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Je ziet vanzelf wanneer hij jouw hulp zou kunnen gebruiken.",
     "pair": "laten zien hulp nodig te hebben ↔ laten merken dat hij hulp wil",
     "meaning": "عندما يُظهر الزبون أنه يريد المساعدة",
@@ -2997,7 +3127,7 @@
     "explanation": "zien aan gedrag صيغت كـ laten merken.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 6,
       "questionPage": null
     },
@@ -3009,10 +3139,23 @@
     "questionNo": 14,
     "title": "Verkopen is een vak",
     "question": "Een klant in een kledingwinkel zoekt een nieuwe broek. De klant wil hulp van de verkoper. Waar moet de verkoper mee beginnen?",
-    "answer": "C. met het stellen van vragen om te beoordelen wat voor broek de klant wil.",
+    "answer": "C. met het stellen van vragen om te beoordelen wat voor broek de klant wil",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "met het geven van advies over enkele broeken die de klant mooi vindt"
+      },
+      {
+        "label": "B",
+        "text": "met het geven van informatie over enkele broeken die de klant mooi vindt"
+      },
+      {
+        "label": "C",
+        "text": "met het stellen van vragen om te beoordelen wat voor broek de klant wil"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Je stelt eerst gerichte vragen om erachter te komen wat hij wil.",
     "pair": "erachter komen wat hij wil ↔ beoordelen wat voor broek hij wil",
     "meaning": "يبدأ البائع بأسئلة لمعرفة ما يريده الزبون",
@@ -3022,7 +3165,7 @@
     "explanation": "القاعدة العامة طُبقت في السؤال على شراء بنطال.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 6,
       "questionPage": null
     },
@@ -3034,10 +3177,23 @@
     "questionNo": 16,
     "title": "Verkopen is een vak",
     "question": "Voor een verkoper is het belangrijk om tevreden klanten te hebben met een positief beeld van de winkel. Wat is het belangrijkste om dat te kunnen bereiken?",
-    "answer": "C. een vriendelijke houding.",
+    "answer": "C. een vriendelijke houding",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "een eerlijk advies"
+      },
+      {
+        "label": "B",
+        "text": "een goed product tegen een lage prijs"
+      },
+      {
+        "label": "C",
+        "text": "een vriendelijke houding"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "jouw vriendelijke houding het meest bijdraagt aan een goed imago",
     "pair": "het meest bijdragen aan goed imago ↔ het belangrijkste voor een positief beeld",
     "meaning": "التعامل الودود أهم عامل لصورة إيجابية عن المتجر",
@@ -3047,7 +3203,7 @@
     "explanation": "goed imago و positief beeld متساويان، و meest bijdragen يقابل belangrijkste.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 7,
       "questionPage": null
     },
@@ -3061,8 +3217,21 @@
     "question": "Hoe moet een verkoper omgaan met ontevreden klanten die terugkomen om te klagen?",
     "answer": "A. Hij moet hun klachten serieus nemen zodat ze weer tevreden vertrekken.",
     "correctOption": "A",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hij moet hun klachten serieus nemen zodat ze weer tevreden vertrekken."
+      },
+      {
+        "label": "B",
+        "text": "Hij moet klagende klanten gelijk geven zodat ze met een tevreden gevoel vertrekken."
+      },
+      {
+        "label": "C",
+        "text": "Hij moet ontevreden klanten proberen te overtuigen dat hun klachten onterecht zijn."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "de klant serieus neemt … vertrouwen weer terugwinnen … alleen een tevreden klant zorgt voor positieve reclame",
     "pair": "serieus nemen + vertrouwen herstellen ↔ klachten serieus nemen zodat klanten tevreden vertrekken",
     "meaning": "أخذ الشكوى بجدية لاستعادة رضا الزبون",
@@ -3072,7 +3241,7 @@
     "explanation": "الخيار يجمع السلوك والنتيجة في جملة واحدة.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 7,
       "questionPage": null
     },
@@ -3084,10 +3253,23 @@
     "questionNo": 24,
     "title": "De buurt-whatsapp",
     "question": "Wat is de bedoeling van buurt-whatsapp, volgens de tekst?",
-    "answer": "C. dat buren elkaar waarschuwen als ze iets niet vertrouwen.",
+    "answer": "C. dat buren elkaar waarschuwen als ze iets niet vertrouwen",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "dat buren elkaar kunnen helpen als er een ruzie is"
+      },
+      {
+        "label": "B",
+        "text": "dat buren elkaar leuke berichten kunnen sturen"
+      },
+      {
+        "label": "C",
+        "text": "dat buren elkaar waarschuwen als ze iets niet vertrouwen"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "verdachte situaties melden aan buurtgenoten",
     "pair": "verdachte situatie melden ↔ buren waarschuwen als ze iets niet vertrouwen",
     "meaning": "تحذير الجيران عند ملاحظة أمر مشبوه",
@@ -3097,7 +3279,7 @@
     "explanation": "verdacht صيغت في الخيار بعبارة iets niet vertrouwen.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 9,
       "questionPage": null
     },
@@ -3111,8 +3293,21 @@
     "question": "Soms gaan mensen uit een buurt-whatsappgroep zelf achter een vermoedelijke inbreker aan. Vindt Habib Wajid dat goed?",
     "answer": "B. Nee, het is niet verstandig als mensen dit zelf doen.",
     "correctOption": "B",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ja, want dat vergroot de veiligheid in de buurt."
+      },
+      {
+        "label": "B",
+        "text": "Nee, het is niet verstandig als mensen dit zelf doen."
+      },
+      {
+        "label": "C",
+        "text": "Alleen als ze zeker weten dat het inbrekers zijn."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "niet verantwoord als mensen zelf voor politie gaan spelen",
     "pair": "niet verantwoord ↔ niet verstandig; zelf politie spelen ↔ zelf achter een verdachte aangaan",
     "meaning": "ليس من الحكمة أن يلاحق السكان المشتبه به بأنفسهم",
@@ -3122,7 +3317,7 @@
     "explanation": "niet verantwoord لا تعني ممنوعًا بالضرورة؛ هنا تعني غير حكيم/غير آمن.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 9,
       "questionPage": null
     },
@@ -3134,10 +3329,23 @@
     "questionNo": 27,
     "title": "De buurt-whatsapp",
     "question": "Wanneer grijpt beheerder Mitra van de Kuilen in?",
-    "answer": "B. als buren overbodige berichten naar de groep sturen.",
+    "answer": "B. als buren overbodige berichten naar de groep sturen",
     "correctOption": "B",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "als buren onverwacht de groep hebben verlaten"
+      },
+      {
+        "label": "B",
+        "text": "als buren overbodige berichten naar de groep sturen"
+      },
+      {
+        "label": "C",
+        "text": "als buren vervelend op een oproep van iemand reageren"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "geen zin in overbodige berichten … niet bedoeld voor allerlei oproepjes",
     "pair": "overbodige berichten/oproepjes ↔ onnodige berichten naar de groep sturen",
     "meaning": "يتدخل المشرف عند إرسال رسائل غير ضرورية",
@@ -3147,7 +3355,7 @@
     "explanation": "overbodig و onnodig مترادفتان، و oproepjes نوع من الرسائل.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 9,
       "questionPage": null
     },
@@ -3159,10 +3367,23 @@
     "questionNo": 32,
     "title": "Algemene informatie Vision College",
     "question": "William gaat een vavo-opleiding van minder dan 29 lesuren volgen aan het Vision College. Waar hangt de hoogte van Williams cursusgeld van af?",
-    "answer": "B. van het totale aantal lesuren van Williams opleiding.",
+    "answer": "B. van het totale aantal lesuren van Williams opleiding",
     "correctOption": "B",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "van het niveau van de opleiding die William gaat volgen"
+      },
+      {
+        "label": "B",
+        "text": "van het totale aantal lesuren van Williams opleiding"
+      },
+      {
+        "label": "C",
+        "text": "van Williams leeftijd bij de start van de opleiding"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "€ 30,- per lesuur",
     "pair": "per lesuur ↔ hoogte hangt af van het totale aantal lesuren",
     "meaning": "قيمة الرسوم تعتمد على عدد ساعات الدروس",
@@ -3172,7 +3393,7 @@
     "explanation": "عندما يكون السعر لكل ساعة، يتحدد المجموع بعدد الساعات.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 11,
       "questionPage": null
     },
@@ -3184,10 +3405,27 @@
     "questionNo": 33,
     "title": "Algemene informatie Vision College",
     "question": "Stacy hoort dat het alarmsignaal afgaat. Wat kan ze het beste doen?",
-    "answer": "C. meteen naar de verzamelplaats buiten gaan.",
+    "answer": "C. meteen naar de verzamelplaats buiten gaan",
     "correctOption": "C",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "bellen naar toestel 100 of naar 8888"
+      },
+      {
+        "label": "B",
+        "text": "een conci?rge of de receptie waarschuwen"
+      },
+      {
+        "label": "C",
+        "text": "meteen naar de verzamelplaats buiten gaan"
+      },
+      {
+        "label": "D",
+        "text": "zich melden bij een bedrijfshulpverlener"
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "Ga zo snel mogelijk … naar de verzamelplaats",
     "pair": "zo snel mogelijk ↔ meteen; verzamelplaats ↔ verzamelplaats buiten",
     "meaning": "اذهب فورًا إلى نقطة التجمع",
@@ -3197,7 +3435,7 @@
     "explanation": "meteen تلخص zo snel mogelijk في سياق الإنذار.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 10,
       "questionPage": null
     },
@@ -3211,8 +3449,21 @@
     "question": "Wat meld je door middel van het scannen van je Visionpas?",
     "answer": "B. Alleen dat je in het gebouw aanwezig bent en in welke onderwijsruimte je bent.",
     "correctOption": "B",
-    "options": [],
-    "mode": "self-check",
+    "options": [
+      {
+        "label": "A",
+        "text": "Alleen dat je in het gebouw aanwezig bent."
+      },
+      {
+        "label": "B",
+        "text": "Alleen dat je in het gebouw aanwezig bent en in welke onderwijsruimte je bent."
+      },
+      {
+        "label": "C",
+        "text": "Dat je in het gebouw aanwezig bent, in welke onderwijsruimte je bent en dat je een bepaalde les hebt gevolgd."
+      }
+    ],
+    "mode": "multiple-choice",
     "evidence": "registreer je dat je in het gebouw aanwezig bent … registreren of je in de onderwijsruimte aanwezig bent",
     "pair": "aanwezig in gebouw + onderwijsruimte ↔ alleen aanwezigheid en ruimte, niet dat les is gevolgd",
     "meaning": "تسجل وجودك في المبنى والقاعة، وليس حضور الدرس نفسه",
@@ -3222,7 +3473,7 @@
     "explanation": "الخيار الصحيح يحافظ على ما ذُكر ويرفض الإضافة غير الموجودة: إثبات حضور الدرس.",
     "source": {
       "label": "Lezen I 2025 — Openbaar examen",
-      "url": "./sources/exam-2025-text.pdf",
+      "url": "./sources/exam-2025-complete.pdf",
       "evidencePage": 10,
       "questionPage": null
     },

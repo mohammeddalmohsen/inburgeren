@@ -11,8 +11,6 @@ interface FlatQuestion {
   question: ExamQuestion;
 }
 
-const PARTIAL_2025_NOTE = 'هذا النموذج غير مكتمل تفاعليًا لأن ملف الأسئلة والاختيارات الكامل غير موجود ضمن المصادر. لم تتم إضافة اختيارات مصطنعة.';
-
 function createSession(modelId: string, sectionId: string): ExamSessionRecord {
   const now = Date.now();
   return {
@@ -223,7 +221,7 @@ export function ExamPage() {
           <h1>{model.title}</h1>
           {examDataError && <p className="partial-note partial-note--danger">{examDataError}</p>}
           {storageError && <p className="partial-note partial-note--danger">{storageError}</p>}
-          {model.status === 'partial' && <p className="partial-note">{model.year === 2025 ? PARTIAL_2025_NOTE : model.statusNote}</p>}
+          {model.status === 'partial' && <p className="partial-note">{model.statusNote}</p>}
         </div>
         <div className="exam-heading__controls">
           <label><span>القسم</span><select value={sectionId} onChange={(event) => reset(event.target.value)}>
@@ -255,7 +253,7 @@ export function ExamPage() {
 
             {current.question.selfCheck || !current.question.correctOption ? (
               <div className="self-check-area">
-                <div className="self-check-note"><FileQuestion size={20} /><p>اكتب جوابك بعد قراءة النص. لا توجد اختيارات كاملة في الملف المرفق، لذلك لا نختلق إجابات وهمية.</p></div>
+                <div className="self-check-note"><FileQuestion size={20} /><p>اكتب جوابك بعد قراءة النص. هذا السؤال لا يحتوي اختيارات قابلة للتقييم الآلي في قاعدة البيانات.</p></div>
                 <textarea value={draft} onChange={(event) => setDraft(event.target.value)} disabled={solved} placeholder="اكتب الفكرة أو كلمات الدليل…" />
                 {!solved && <button className="button button--primary" onClick={submit} disabled={!draft.trim()}>إظهار الإجابة الموثقة</button>}
               </div>

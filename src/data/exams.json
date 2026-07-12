@@ -4181,11 +4181,10 @@
     "year": 2025,
     "title": "Openbaar examen Lezen I 2025",
     "kind": "official",
-    "status": "partial",
-    "statusNote": "يتوفر النص الرسمي كاملًا، لكن ملف الأسئلة الكامل غير موجود ضمن الملفات المرفقة. أُضيفت 19 مسألة موثقة فقط دون اختراع اختيارات.",
-    "sourceUrl": "./sources/exam-2025-text.pdf",
+    "status": "complete",
+    "sourceUrl": "./sources/exam-2025-complete.pdf",
     "answerSourceUrl": "./sources/answers-2025.pdf",
-    "questionCount": 19,
+    "questionCount": 35,
     "officialQuestionCount": 35,
     "sections": [
       {
@@ -4202,56 +4201,127 @@
             "id": "2025-1",
             "number": 1,
             "question": "Wat voor organisatie is Jeurissen?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "de instelling waar Ruud zijn opleiding tot rij-instructeur volgt"
+              },
+              {
+                "label": "B",
+                "text": "de rijschool waar Ruud binnenkort zal gaan werken"
+              },
+              {
+                "label": "C",
+                "text": "het bedrijf waar Ruud momenteel als timmerman werkt"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. het bedrijf waar Ruud momenteel als timmerman werkt.",
-            "selfCheck": true,
-            "explanation": "يجب ربط كلمة werkgever بالمهنة المذكورة، لا بمكان الدراسة.",
-            "evidence": "werkgever Jeurissen … Ruud is timmerman … Op dit moment"
+            "answer": "C. het bedrijf waar Ruud momenteel als timmerman werkt"
           },
           {
             "id": "2025-2",
             "number": 2,
             "question": "Wat vindt Ruud van medische onderzoeken in de bouwsector?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Hij vindt de onderzoeken bijzonder nuttig voor mensen die zwaar werk doen."
+              },
+              {
+                "label": "B",
+                "text": "Hij vindt het lastig dat jonge werknemers niet vaak genoeg onderzocht worden."
+              },
+              {
+                "label": "C",
+                "text": "Hij vindt medische onderzoeken minder belangrijk dan adviesgesprekken."
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. Hij vindt de onderzoeken bijzonder nuttig voor mensen die zwaar werk doen.",
-            "selfCheck": true,
-            "explanation": "een goede zaak أعيدت بـ nuttig، و zware beroepen بـ zwaar werk.",
-            "evidence": "Ruud vindt het een goede zaak … Dat geldt zeker voor de zware beroepen."
+            "answer": "A. Hij vindt de onderzoeken bijzonder nuttig voor mensen die zwaar werk doen."
           },
           {
             "id": "2025-3",
             "number": 3,
             "question": "Wat wil Ruud duidelijk maken met het voorbeeld van zijn collega van 35 jaar?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "dat er mensen zijn die geen ander werk kunnen vinden"
+              },
+              {
+                "label": "B",
+                "text": "dat mensen beter geen beroep in de bouw kunnen kiezen"
+              },
+              {
+                "label": "C",
+                "text": "dat mensen zware beroepen soms niet lang kunnen uitoefenen"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. dat mensen zware beroepen soms niet lang kunnen uitoefenen.",
-            "selfCheck": true,
-            "explanation": "een beroep niet volhouden يعني عدم القدرة على ممارسته مدة طويلة.",
-            "evidence": "Hij moet nog zeker 30 jaar, maar houdt dat in dit beroep waarschijnlijk niet vol."
+            "answer": "C. dat mensen zware beroepen soms niet lang kunnen uitoefenen"
           },
           {
             "id": "2025-4",
             "number": 4,
             "question": "Wat vindt Ruud ervan dat hij nieuwe dingen moet leren tijdens zijn omscholing?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Het is even volhouden, maar met hard werken lukt het hem."
+              },
+              {
+                "label": "B",
+                "text": "Het is lang geleden dat hij moest leren, maar hij vindt het makkelijk."
+              },
+              {
+                "label": "C",
+                "text": "Hij vindt het leuk, maar hij vindt zichzelf er eigenlijk te oud voor."
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. Het is even volhouden, maar met hard werken lukt het hem.",
-            "selfCheck": true,
-            "explanation": "هذه إعادة الصياغة النموذجية: لا توجد الكلمات نفسها تقريبًا لكن المعنى مطابق.",
-            "evidence": "als je heel goed je best doet, lukt het echt wel"
+            "answer": "A. Het is even volhouden, maar met hard werken lukt het hem."
           },
           {
             "id": "2025-5",
             "number": 5,
             "question": "Waarin verschilt Ruud van andere mensen met een zwaar beroep, volgens Joke Hermans?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Ruud heeft vrij lang gewacht voor hij zich liet omscholen."
+              },
+              {
+                "label": "B",
+                "text": "Ruud is later dan gemiddeld begonnen met zijn beroep."
+              },
+              {
+                "label": "C",
+                "text": "Ruud is zelf in actie gekomen om ander werk te vinden."
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. Ruud is zelf in actie gekomen om ander werk te vinden.",
-            "selfCheck": true,
-            "explanation": "ثلاث عبارات في النص تقابل عبارة واحدة في الخيار.",
-            "evidence": "Ruud nam het initiatief … zelf … regie pakt … anderen zijn afwachtend"
+            "answer": "C. Ruud is zelf in actie gekomen om ander werk te vinden."
+          },
+          {
+            "id": "2025-6",
+            "number": 6,
+            "question": "Wat is het doel van deze tekst?",
+            "options": [
+              {
+                "label": "A",
+                "text": "de lezer enthousiast maken over omscholing door een voorbeeld te geven"
+              },
+              {
+                "label": "B",
+                "text": "de lezer laten beseffen dat een omscholing meestal veel tijd en moeite kost"
+              },
+              {
+                "label": "C",
+                "text": "de lezer uitleggen dat niet iedereen zich zomaar kan laten omscholen"
+              }
+            ],
+            "correctOption": "A",
+            "answer": "A. de lezer enthousiast maken over omscholing door een voorbeeld te geven"
           }
         ]
       },
@@ -4269,45 +4339,127 @@
             "id": "2025-7",
             "number": 7,
             "question": "Wat is het verschil tussen dieren en mensen als het om huilen gaat?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Bij pijnlijke ogen maken mensen veel sneller traanvocht aan dan dieren."
+              },
+              {
+                "label": "B",
+                "text": "Dieren huilen alleen bij lichamelijke pijn, mensen ook bij vervelende ervaringen."
+              },
+              {
+                "label": "C",
+                "text": "Mensen huilen door positieve of negatieve gevoelens, dieren doen dat niet."
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. Mensen huilen door positieve of negatieve gevoelens, dieren doen dat niet.",
-            "selfCheck": true,
-            "explanation": "الخيار يجمع أمثلة المشاعر تحت فئتين عامتين.",
-            "evidence": "alleen mensen huilen van emotie … verdriet, woede … geluk en vreugde"
+            "answer": "C. Mensen huilen door positieve of negatieve gevoelens, dieren doen dat niet."
           },
           {
             "id": "2025-8",
             "number": 8,
-            "question": "Wat zegt de schrijver over pasgeboren baby's die huilen?",
-            "options": [],
+            "question": "Wat zegt de schrijver over pasgeboren baby?s die huilen?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Bij hen heeft huilen dezelfde functie als bij huilende volwassenen."
+              },
+              {
+                "label": "B",
+                "text": "Voor hen heeft huilen meer nut dan wanneer volwassenen huilen."
+              },
+              {
+                "label": "C",
+                "text": "Zij worden als ze in het openbaar huilen sneller getroost door hun ouders."
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. Bij hen heeft huilen dezelfde functie als bij huilende volwassenen.",
-            "selfCheck": true,
-            "explanation": "لفهم die functie يجب الرجوع إلى وظيفة بكاء الطفل في الجملة السابقة.",
-            "evidence": "Gedragswetenschappers geven aan dat huilen bij volwassenen ook die functie heeft."
+            "answer": "A. Bij hen heeft huilen dezelfde functie als bij huilende volwassenen."
+          },
+          {
+            "id": "2025-9",
+            "number": 9,
+            "question": "Waarom huilen vrouwen meer dan mannen?",
+            "options": [
+              {
+                "label": "A",
+                "text": "alleen door verschillen in hormonen tussen mannen en vrouwen"
+              },
+              {
+                "label": "B",
+                "text": "alleen door verschillen in de traanbuizen van mannen en vrouwen"
+              },
+              {
+                "label": "C",
+                "text": "zowel door verschillen in hormonen als door verschillen in traanbuizen"
+              }
+            ],
+            "correctOption": "C",
+            "answer": "C. zowel door verschillen in hormonen als door verschillen in traanbuizen"
           },
           {
             "id": "2025-10",
             "number": 10,
             "question": "Wat voor functie hebben gelukshormonen, volgens de tekst?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Ze helpen lichamelijke pijn te verminderen."
+              },
+              {
+                "label": "B",
+                "text": "Ze verwijderen endorfine uit het lichaam."
+              },
+              {
+                "label": "C",
+                "text": "Ze zorgen ervoor dat je rustiger wordt."
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. Ze zorgen ervoor dat je rustiger wordt.",
-            "selfCheck": true,
-            "explanation": "kalm و rustig مترادفتان هنا.",
-            "evidence": "endorfinen, die je kalm maken"
+            "answer": "C. Ze zorgen ervoor dat je rustiger wordt."
+          },
+          {
+            "id": "2025-11",
+            "number": 11,
+            "question": "Welke zin vat de mening van de schrijver het beste samen?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Huilen is gezond, dus het is niet erg om het soms te doen."
+              },
+              {
+                "label": "B",
+                "text": "Huilen is nuttig, maar alleen als je je slecht voelt of pijn hebt."
+              },
+              {
+                "label": "C",
+                "text": "Pas op met huilen, want mensen kunnen het als zwakte zien."
+              }
+            ],
+            "correctOption": "A",
+            "answer": "A. Huilen is gezond, dus het is niet erg om het soms te doen."
           },
           {
             "id": "2025-12",
             "number": 12,
             "question": "Wat is het doel van deze tekst?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "de lezer informeren over verschillende feiten over huilen"
+              },
+              {
+                "label": "B",
+                "text": "de lezer vertellen wanneer het gepast is om te huilen"
+              },
+              {
+                "label": "C",
+                "text": "de lezer waarschuwen voor de effecten van huilen"
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. de lezer informeren over verschillende feiten over huilen.",
-            "selfCheck": true,
-            "explanation": "weetjes هي حقائق أو معلومات قصيرة.",
-            "evidence": "Lees verder voor een paar leuke weetjes over huilen"
+            "answer": "A. de lezer informeren over verschillende feiten over huilen"
           }
         ]
       },
@@ -4325,45 +4477,247 @@
             "id": "2025-13",
             "number": 13,
             "question": "Een klant komt een kledingwinkel binnen. De verkoper groet de klant. Wanneer kan de verkoper het beste naar de klant toe gaan om hem te helpen?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "nadat de klant heeft laten merken dat hij hulp wil"
+              },
+              {
+                "label": "B",
+                "text": "nadat de klant zelf om hulp heeft gevraagd"
+              },
+              {
+                "label": "C",
+                "text": "zo snel mogelijk nadat de klant is binnengekomen"
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. nadat de klant heeft laten merken dat hij hulp wil.",
-            "selfCheck": true,
-            "explanation": "zien aan gedrag صيغت كـ laten merken.",
-            "evidence": "Je ziet vanzelf wanneer hij jouw hulp zou kunnen gebruiken."
+            "answer": "A. nadat de klant heeft laten merken dat hij hulp wil"
           },
           {
             "id": "2025-14",
             "number": 14,
             "question": "Een klant in een kledingwinkel zoekt een nieuwe broek. De klant wil hulp van de verkoper. Waar moet de verkoper mee beginnen?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "met het geven van advies over enkele broeken die de klant mooi vindt"
+              },
+              {
+                "label": "B",
+                "text": "met het geven van informatie over enkele broeken die de klant mooi vindt"
+              },
+              {
+                "label": "C",
+                "text": "met het stellen van vragen om te beoordelen wat voor broek de klant wil"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. met het stellen van vragen om te beoordelen wat voor broek de klant wil.",
-            "selfCheck": true,
-            "explanation": "القاعدة العامة طُبقت في السؤال على شراء بنطال.",
-            "evidence": "Je stelt eerst gerichte vragen om erachter te komen wat hij wil."
+            "answer": "C. met het stellen van vragen om te beoordelen wat voor broek de klant wil"
+          },
+          {
+            "id": "2025-15",
+            "number": 15,
+            "question": "Onder het kopje 'Service maakt het verschil' staan veel vragen. Wat wil de schrijver hiermee duidelijk maken?",
+            "options": [
+              {
+                "label": "A",
+                "text": "dat het belangrijk is om klanten een goede service te bieden"
+              },
+              {
+                "label": "B",
+                "text": "dat het belangrijk is om vragen van klanten te beantwoorden"
+              },
+              {
+                "label": "C",
+                "text": "dat het belangrijk is om vriendelijk te blijven tegen klanten"
+              }
+            ],
+            "correctOption": "A",
+            "answer": "A. dat het belangrijk is om klanten een goede service te bieden"
           },
           {
             "id": "2025-16",
             "number": 16,
             "question": "Voor een verkoper is het belangrijk om tevreden klanten te hebben met een positief beeld van de winkel. Wat is het belangrijkste om dat te kunnen bereiken?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "een eerlijk advies"
+              },
+              {
+                "label": "B",
+                "text": "een goed product tegen een lage prijs"
+              },
+              {
+                "label": "C",
+                "text": "een vriendelijke houding"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. een vriendelijke houding.",
-            "selfCheck": true,
-            "explanation": "goed imago و positief beeld متساويان، و meest bijdragen يقابل belangrijkste.",
-            "evidence": "jouw vriendelijke houding het meest bijdraagt aan een goed imago"
+            "answer": "C. een vriendelijke houding"
           },
           {
             "id": "2025-17",
             "number": 17,
             "question": "Hoe moet een verkoper omgaan met ontevreden klanten die terugkomen om te klagen?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Hij moet hun klachten serieus nemen zodat ze weer tevreden vertrekken."
+              },
+              {
+                "label": "B",
+                "text": "Hij moet klagende klanten gelijk geven zodat ze met een tevreden gevoel vertrekken."
+              },
+              {
+                "label": "C",
+                "text": "Hij moet ontevreden klanten proberen te overtuigen dat hun klachten onterecht zijn."
+              }
+            ],
             "correctOption": "A",
-            "answer": "A. Hij moet hun klachten serieus nemen zodat ze weer tevreden vertrekken.",
-            "selfCheck": true,
-            "explanation": "الخيار يجمع السلوك والنتيجة في جملة واحدة.",
-            "evidence": "de klant serieus neemt … vertrouwen weer terugwinnen … alleen een tevreden klant zorgt voor positieve reclame"
+            "answer": "A. Hij moet hun klachten serieus nemen zodat ze weer tevreden vertrekken."
+          },
+          {
+            "id": "2025-18",
+            "number": 18,
+            "question": "Wat is het doel van deze tekst?",
+            "options": [
+              {
+                "label": "A",
+                "text": "de lezer duidelijk maken dat verkopen een mooi maar moeilijk vak is"
+              },
+              {
+                "label": "B",
+                "text": "de lezer uitleggen hoe een verkoper het beste met klanten kan omgaan"
+              },
+              {
+                "label": "C",
+                "text": "de lezer vermaken met leuke ervaringen van klanten en verkopers"
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. de lezer uitleggen hoe een verkoper het beste met klanten kan omgaan"
+          }
+        ]
+      },
+      {
+        "id": "2025-s6",
+        "title": "Overuren",
+        "text": "Deze tekst is een deel uit de arbeidsvoorwaarden in de metaalindustrie. De tekst gaat over overuren: uren\ndie extra worden gewerkt.\nBEANTWOORD VRAAG 19 T/M 23\nOveruren\nOverwerk is werktijd die buiten het dienstrooster (de voor u geldende dagelijkse werktijd) valt.\nOverwerk wordt extra beloond. Er is echter wel een aantal regels en uitzonderingen. Deze zijn:\n• De individuele werktijd in de metaalindustrie is 8 uren per dag. De werktijden worden vastgelegd\nin uw dienstrooster. Uren die u werkt buiten het dienstrooster, maar binnen de 8 werkuren per\ndag, worden ‘verschoven uren’ genoemd. Daarvoor gelden andere toeslagen.\n• Er is geen beloning als u slechts een enkele keer maximaal een half uur overwerkt, direct\naansluitend op het normale werk. Bijvoorbeeld het afmaken van een klus, als dit af en toe\nvoorkomt.\nAls u overwerkt tot 24.00 uur na een volle werkdag hoeft u de eerste 11 uren na het overwerk niet te\nwerken. Als er binnen die 11 uren gewone werktijd gepland staat in het dienstrooster, moet de\nwerkgever deze gewone werktijd echter wel betalen!\nOverwerk verplicht in de metaalindustrie?\nDe werkgever mag u verplichten om over te werken tot 10 uur per vier weken, maar moet altijd\nrekening houden met uw persoonlijke omstandigheden.\nOverwerk boven de 10 uur per vier weken kan alleen worden verplicht in het geval van calamiteiten.\nMet calamiteiten wordt bijvoorbeeld bedoeld:\n• boetes;\n• schade voor opdrachtgevers/derden of het eigen bedrijf.\nAls er geen sprake is van een calamiteit, mag u overwerk boven de 10 uur per vier weken dus\nweigeren.\nVoor bepaalde werknemers geldt de verplichting tot overwerk in elk geval niet, namelijk:\n• als u jonger bent dan 18 jaar;\n• als u om gezondheidsredenen geen overwerk kan/mag verrichten.\nAls u 55 jaar of ouder bent, kan u verplicht worden tot maximaal 5 uren overwerk in een periode van\nvier weken.\nBetaling van overuren in de metaalindustrie\nAls u overwerkt kan u kiezen hoe u de overuren wil laten vergoeden. Dat kan op verschillende\nmanieren:\n1) uren kunnen in geld worden vergoed;\n2) uren kunnen met een maximum van 10 dagen per jaar in vrije tijd worden vergoed. De opname\nvan de vrije tijd gebeurt in overleg met uw werkgever;\n3) in overleg met uw werkgever kunnen meer dan 10 dagen per jaar ingezet worden als vrije tijd.",
+        "pdfPageStart": 11,
+        "pdfPages": [
+          11
+        ],
+        "questions": [
+          {
+            "id": "2025-19",
+            "number": 19,
+            "question": "In het dienstrooster van Joseph staan werktijden van 7.00 tot 15.00 uur. Vandaag moet hij van 8.00 tot 16.00 uur werken. Valt dit onder overwerk?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Ja, want het laatste uur valt buiten zijn dienstrooster."
+              },
+              {
+                "label": "B",
+                "text": "Nee, want deze werkuren tellen als verschoven uren."
+              },
+              {
+                "label": "C",
+                "text": "Misschien, als zo?n verandering vaker voor gaat komen."
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. Nee, want deze werkuren tellen als verschoven uren."
+          },
+          {
+            "id": "2025-20",
+            "number": 20,
+            "question": "Marly moet na een volle werkdag tot 24.00 uur overwerken. Volgens het dienstrooster moet ze de volgende ochtend om 7.00 uur weer beginnen. Wat gebeurt er nu?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Ze hoeft de dag na het overwerk niet te werken."
+              },
+              {
+                "label": "B",
+                "text": "Ze mag pas na 11 uren van rust weer gaan werken."
+              },
+              {
+                "label": "C",
+                "text": "Ze moet gewoon om 7.00 uur beginnen met werken."
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. Ze mag pas na 11 uren van rust weer gaan werken."
+          },
+          {
+            "id": "2025-21",
+            "number": 21,
+            "question": "Claire is 56 jaar en heeft een goede gezondheid. Ze wil liever niet overwerken. Wat kan haar werkgever doen?",
+            "options": [
+              {
+                "label": "A",
+                "text": "De werkgever kan Claire niet verplichten om over te werken."
+              },
+              {
+                "label": "B",
+                "text": "De werkgever kan Claire verplichten om 5 uur per vier weken over te werken."
+              },
+              {
+                "label": "C",
+                "text": "De werkgever kan Claire verplichten om 10 uur per vier weken over te werken."
+              },
+              {
+                "label": "D",
+                "text": "De werkgever kan Claire altijd verplichten om over te werken."
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. De werkgever kan Claire verplichten om 5 uur per vier weken over te werken."
+          },
+          {
+            "id": "2025-22",
+            "number": 22,
+            "question": "Pawel heeft 8 overuren gemaakt. Wat gebeurt er met die overuren?",
+            "options": [
+              {
+                "label": "A",
+                "text": "De overuren worden vergoed in geld."
+              },
+              {
+                "label": "B",
+                "text": "De overuren worden vergoed in vrije tijd."
+              },
+              {
+                "label": "C",
+                "text": "Hij mag zelf kiezen of de overuren worden vergoed in vrije tijd of in geld."
+              }
+            ],
+            "correctOption": "C",
+            "answer": "C. Hij mag zelf kiezen of de overuren worden vergoed in vrije tijd of in geld."
+          },
+          {
+            "id": "2025-23",
+            "number": 23,
+            "question": "Wat is het doel van deze tekst?",
+            "options": [
+              {
+                "label": "A",
+                "text": "de lezer overtuigen van het belang van overwerken"
+              },
+              {
+                "label": "B",
+                "text": "de lezer uitleggen wat de regels voor overwerk zijn"
+              },
+              {
+                "label": "C",
+                "text": "de lezer waarschuwen voor de risico?s van overwerken"
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. de lezer uitleggen wat de regels voor overwerk zijn"
           }
         ]
       },
@@ -4380,34 +4734,106 @@
             "id": "2025-24",
             "number": 24,
             "question": "Wat is de bedoeling van buurt-whatsapp, volgens de tekst?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "dat buren elkaar kunnen helpen als er een ruzie is"
+              },
+              {
+                "label": "B",
+                "text": "dat buren elkaar leuke berichten kunnen sturen"
+              },
+              {
+                "label": "C",
+                "text": "dat buren elkaar waarschuwen als ze iets niet vertrouwen"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. dat buren elkaar waarschuwen als ze iets niet vertrouwen.",
-            "selfCheck": true,
-            "explanation": "verdacht صيغت في الخيار بعبارة iets niet vertrouwen.",
-            "evidence": "verdachte situaties melden aan buurtgenoten"
+            "answer": "C. dat buren elkaar waarschuwen als ze iets niet vertrouwen"
+          },
+          {
+            "id": "2025-25",
+            "number": 25,
+            "question": "Tea Rukavina begon een buurt-whatsapp nadat er bij haar thuis bijna was ingebroken. Waarom deed ze dat?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Ze wilde de buurt uitleggen wat de politie nu ging doen."
+              },
+              {
+                "label": "B",
+                "text": "Ze wilde de buurt vragen of zij iets bijzonders hadden gezien."
+              },
+              {
+                "label": "C",
+                "text": "Ze wilde de buurt waarschuwen voor inbrekers in de wijk."
+              }
+            ],
+            "correctOption": "C",
+            "answer": "C. Ze wilde de buurt waarschuwen voor inbrekers in de wijk."
           },
           {
             "id": "2025-26",
             "number": 26,
             "question": "Soms gaan mensen uit een buurt-whatsappgroep zelf achter een vermoedelijke inbreker aan. Vindt Habib Wajid dat goed?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Ja, want dat vergroot de veiligheid in de buurt."
+              },
+              {
+                "label": "B",
+                "text": "Nee, het is niet verstandig als mensen dit zelf doen."
+              },
+              {
+                "label": "C",
+                "text": "Alleen als ze zeker weten dat het inbrekers zijn."
+              }
+            ],
             "correctOption": "B",
-            "answer": "B. Nee, het is niet verstandig als mensen dit zelf doen.",
-            "selfCheck": true,
-            "explanation": "niet verantwoord لا تعني ممنوعًا بالضرورة؛ هنا تعني غير حكيم/غير آمن.",
-            "evidence": "niet verantwoord als mensen zelf voor politie gaan spelen"
+            "answer": "B. Nee, het is niet verstandig als mensen dit zelf doen."
           },
           {
             "id": "2025-27",
             "number": 27,
             "question": "Wanneer grijpt beheerder Mitra van de Kuilen in?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "als buren onverwacht de groep hebben verlaten"
+              },
+              {
+                "label": "B",
+                "text": "als buren overbodige berichten naar de groep sturen"
+              },
+              {
+                "label": "C",
+                "text": "als buren vervelend op een oproep van iemand reageren"
+              }
+            ],
             "correctOption": "B",
-            "answer": "B. als buren overbodige berichten naar de groep sturen.",
-            "selfCheck": true,
-            "explanation": "overbodig و onnodig مترادفتان، و oproepjes نوع من الرسائل.",
-            "evidence": "geen zin in overbodige berichten … niet bedoeld voor allerlei oproepjes"
+            "answer": "B. als buren overbodige berichten naar de groep sturen"
+          },
+          {
+            "id": "2025-28",
+            "number": 28,
+            "question": "Wat is het doel van deze tekst?",
+            "options": [
+              {
+                "label": "A",
+                "text": "de lezer adviseren om voorzichtig te zijn in een buurt-whatsapp"
+              },
+              {
+                "label": "B",
+                "text": "de lezer informeren over voor- en nadelen van een buurt-whatsapp"
+              },
+              {
+                "label": "C",
+                "text": "de lezer overhalen om een eigen buurt-whatsapp te starten"
+              }
+            ],
+            "correctOption": "B",
+            "answer": "B. de lezer informeren over voor- en nadelen van een buurt-whatsapp"
           }
         ]
       },
@@ -4425,37 +4851,155 @@
         ],
         "questions": [
           {
+            "id": "2025-29",
+            "number": 29,
+            "question": "Marisa volgt een opleiding aan het Vision College. Ze heeft een uitje met haar klas. Wordt dit uitje betaald door het Vision College?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Ja, want de kosten voor uitjes vallen onder het lesgeld."
+              },
+              {
+                "label": "B",
+                "text": "Nee, want studenten moeten zelf voor uitjes betalen."
+              },
+              {
+                "label": "C",
+                "text": "Alleen als het uitje onderdeel is van het lesprogramma."
+              }
+            ],
+            "correctOption": "C",
+            "answer": "C. Alleen als het uitje onderdeel is van het lesprogramma."
+          },
+          {
+            "id": "2025-30",
+            "number": 30,
+            "question": "Reza volgt een BBL-opleiding. Hij wil een derdenmachtiging laten invullen voor zijn cursusgeld. Wie moet deze derdenmachtiging ondertekenen voordat Reza hem inlevert?",
+            "options": [
+              {
+                "label": "A",
+                "text": "de werkgever en Reza zelf"
+              },
+              {
+                "label": "B",
+                "text": "de werkgever en Team debiteuren"
+              },
+              {
+                "label": "C",
+                "text": "Team debiteuren en Reza zelf"
+              }
+            ],
+            "correctOption": "A",
+            "answer": "A. de werkgever en Reza zelf"
+          },
+          {
+            "id": "2025-31",
+            "number": 31,
+            "question": "Stef is zijn Visionpas verloren. Hij vraagt een nieuwe pas aan. Wat moet Stef in totaal betalen?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Hij hoeft niets te betalen."
+              },
+              {
+                "label": "B",
+                "text": "Hij moet ? 5,- voor de nieuwe pas betalen."
+              },
+              {
+                "label": "C",
+                "text": "Hij moet ? 5,- voor de nieuwe pas en ? 5,- administratiekosten betalen."
+              }
+            ],
+            "correctOption": "C",
+            "answer": "C. Hij moet ? 5,- voor de nieuwe pas en ? 5,- administratiekosten betalen."
+          },
+          {
             "id": "2025-32",
             "number": 32,
             "question": "William gaat een vavo-opleiding van minder dan 29 lesuren volgen aan het Vision College. Waar hangt de hoogte van Williams cursusgeld van af?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "van het niveau van de opleiding die William gaat volgen"
+              },
+              {
+                "label": "B",
+                "text": "van het totale aantal lesuren van Williams opleiding"
+              },
+              {
+                "label": "C",
+                "text": "van Williams leeftijd bij de start van de opleiding"
+              }
+            ],
             "correctOption": "B",
-            "answer": "B. van het totale aantal lesuren van Williams opleiding.",
-            "selfCheck": true,
-            "explanation": "عندما يكون السعر لكل ساعة، يتحدد المجموع بعدد الساعات.",
-            "evidence": "€ 30,- per lesuur"
+            "answer": "B. van het totale aantal lesuren van Williams opleiding"
           },
           {
             "id": "2025-33",
             "number": 33,
             "question": "Stacy hoort dat het alarmsignaal afgaat. Wat kan ze het beste doen?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "bellen naar toestel 100 of naar 8888"
+              },
+              {
+                "label": "B",
+                "text": "een conci?rge of de receptie waarschuwen"
+              },
+              {
+                "label": "C",
+                "text": "meteen naar de verzamelplaats buiten gaan"
+              },
+              {
+                "label": "D",
+                "text": "zich melden bij een bedrijfshulpverlener"
+              }
+            ],
             "correctOption": "C",
-            "answer": "C. meteen naar de verzamelplaats buiten gaan.",
-            "selfCheck": true,
-            "explanation": "meteen تلخص zo snel mogelijk في سياق الإنذار.",
-            "evidence": "Ga zo snel mogelijk … naar de verzamelplaats"
+            "answer": "C. meteen naar de verzamelplaats buiten gaan"
+          },
+          {
+            "id": "2025-34",
+            "number": 34,
+            "question": "Dounia gaat stoppen met haar opleiding in de sector Gezondheidszorg. Ze wil zich laten uitschrijven. Kan ze hiervoor bij de decaan terecht?",
+            "options": [
+              {
+                "label": "A",
+                "text": "Ja, de decaan kan haar uitschrijven."
+              },
+              {
+                "label": "B",
+                "text": "Nee, ze moet daarvoor naar haar mentor."
+              },
+              {
+                "label": "C",
+                "text": "Dat kan, maar het mag ook bij het Studie Informatie Punt (STIP)."
+              }
+            ],
+            "correctOption": "A",
+            "answer": "A. Ja, de decaan kan haar uitschrijven."
           },
           {
             "id": "2025-35",
             "number": 35,
             "question": "Wat meld je door middel van het scannen van je Visionpas?",
-            "options": [],
+            "options": [
+              {
+                "label": "A",
+                "text": "Alleen dat je in het gebouw aanwezig bent."
+              },
+              {
+                "label": "B",
+                "text": "Alleen dat je in het gebouw aanwezig bent en in welke onderwijsruimte je bent."
+              },
+              {
+                "label": "C",
+                "text": "Dat je in het gebouw aanwezig bent, in welke onderwijsruimte je bent en dat je een bepaalde les hebt gevolgd."
+              }
+            ],
             "correctOption": "B",
-            "answer": "B. Alleen dat je in het gebouw aanwezig bent en in welke onderwijsruimte je bent.",
-            "selfCheck": true,
-            "explanation": "الخيار الصحيح يحافظ على ما ذُكر ويرفض الإضافة غير الموجودة: إثبات حضور الدرس.",
-            "evidence": "registreer je dat je in het gebouw aanwezig bent … registreren of je in de onderwijsruimte aanwezig bent"
+            "answer": "B. Alleen dat je in het gebouw aanwezig bent en in welke onderwijsruimte je bent."
           }
         ]
       }

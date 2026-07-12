@@ -328,7 +328,7 @@ function TrainingQuestion({
         </div>
       ) : (
         <div className="self-check-area">
-          <div className="self-check-note"><SearchCheck size={20} /><p>لا تتوفر بقية الاختيارات في المصدر المرفق لهذا النموذج؛ لذلك يستخدم هذا السؤال تقييمًا ذاتيًا صريحًا، دون اختراع مشتّتات.</p></div>
+          <div className="self-check-note"><SearchCheck size={20} /><p>هذا السؤال لا يحتوي اختيارات قابلة للتقييم الآلي في قاعدة البيانات؛ لذلك يستخدم تقييمًا ذاتيًا صريحًا.</p></div>
           <label htmlFor={`draft-${example.id}`}>اكتب كلمات البحث أو الجواب المتوقع</label>
           <textarea id={`draft-${example.id}`} value={draft} onChange={(e) => setDraft(e.target.value)} disabled={showAnalysis} placeholder="اكتب ما وجدته في النص أو ما تتوقعه…" />
           {!showAnalysis && <button className="button button--primary" type="button" onClick={revealSelfCheck}>قارن مع الإجابة المعتمدة</button>}

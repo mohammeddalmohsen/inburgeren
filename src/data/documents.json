@@ -59,11 +59,11 @@
     "title": "Openbaar examen Lezen I 2025",
     "year": 2025,
     "category": "official-exam",
-    "description": "النص الرسمي كامل ومفتاح الإجابة الرسمي؛ أُدرجت 19 مسألة موثقة لأن ملف الأسئلة الكامل غير موجود ضمن المرفقات.",
-    "sourceUrl": "./sources/exam-2025-text.pdf",
+    "description": "نموذج رسمي 2025 كامل تفاعليًا: النصوص والأسئلة والاختيارات ومفتاح الإجابة الرسمي.",
+    "sourceUrl": "./sources/exam-2025-complete.pdf",
     "answerUrl": "./sources/answers-2025.pdf",
     "interactiveModelId": "official-2025",
-    "status": "partial"
+    "status": "complete"
   },
   {
     "id": "practice-2025-a",
