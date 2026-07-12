@@ -1,5 +1,6 @@
 import { ArrowLeft, BookOpenCheck, FileText, GraduationCap, LibraryBig, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { publicAssetUrl } from '../lib/assetUrl';
 import { examModelById, sourceDocuments } from '../lib/exams';
 
 const categoryLabels = {
@@ -84,8 +85,8 @@ export function ModelsPage() {
                           ابدأ التدريب <ArrowLeft size={17} />
                         </Link>
                       )}
-                      <a className="button button--secondary" href={doc.sourceUrl} target="_blank" rel="noreferrer">فتح PDF</a>
-                      {doc.answerUrl && <a className="text-link" href={doc.answerUrl} target="_blank" rel="noreferrer">مفتاح الإجابة</a>}
+                      <a className="button button--secondary" href={publicAssetUrl(doc.sourceUrl)} target="_blank" rel="noreferrer">فتح PDF</a>
+                      {doc.answerUrl && <a className="text-link" href={publicAssetUrl(doc.answerUrl)} target="_blank" rel="noreferrer">مفتاح الإجابة</a>}
                     </div>
                   </article>
                 );

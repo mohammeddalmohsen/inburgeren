@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, CheckCircle2, CircleAlert, FileQuestion, RotateCcw } from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { SourceReader } from '../components/SourceReader';
+import { publicAssetUrl } from '../lib/assetUrl';
 import { abandonExamSession, getIncompleteExamSession, putExamSession, type ExamSessionRecord } from '../lib/db';
 import { calculateExamSummary, emptyExamAnswerRecord, registerExamAttempt, type ExamAnswerRecord } from '../lib/examScoring';
 import { examDataError, examModelById, type ExamQuestion, type ExamSection } from '../lib/exams';
@@ -212,7 +213,7 @@ export function ExamPage() {
   const progress = ((session.currentIndex + 1) / queue.length) * 100;
   const answerText = current.question.answer ?? `${current.question.correctOption}. ${current.question.options.find((option) => option.label === current.question.correctOption)?.text ?? ''}`;
   const pdfPage = current.question.evidencePage ?? current.section.pdfPageStart ?? 1;
-  const sourceHref = `${model.sourceUrl}#page=${pdfPage}`;
+  const sourceHref = publicAssetUrl(model.sourceUrl);
 
   return (
     <section className="section shell exam-page">
@@ -278,9 +279,9 @@ export function ExamPage() {
                 {answer.status === 'correct' && <div className="feedback feedback--correct"><CheckCircle2 size={24} /><div><strong>Goed.</strong><p>اختيارك يطابق مفتاح الإجابة الرسمي.</p></div></div>}
                 <section className="answer-panel"><small>الإجابة المعتمدة</small><p lang="nl" dir="ltr">{answerText}</p></section>
                 {current.question.evidence ? (
-                  <div className="evidence-box"><small>الدليل · صفحة {current.question.evidencePage ?? pdfPage}</small><p lang="nl" dir="ltr">{current.question.evidence}</p><a className="text-link" href={sourceHref} target="_blank" rel="noreferrer">فتح صفحة PDF</a></div>
+                  <div className="evidence-box"><small>الدليل · صفحة {current.question.evidencePage ?? pdfPage}</small><p lang="nl" dir="ltr">{current.question.evidence}</p><a className="text-link" href={sourceHref} target="_blank" rel="noreferrer">فتح PDF ثم الانتقال للصفحة {current.question.evidencePage ?? pdfPage}</a></div>
                 ) : (
-                  <div className="evidence-box evidence-box--muted"><small>حالة الدليل</small><p>الإجابة مطابقة لمفتاح الإجابة الرسمي، لكن موضع الدليل التفصيلي لم يُوثق بعد.</p><a className="text-link" href={sourceHref} target="_blank" rel="noreferrer">فتح صفحة PDF للمراجعة</a></div>
+                  <div className="evidence-box evidence-box--muted"><small>حالة الدليل</small><p>الإجابة مطابقة لمفتاح الإجابة الرسمي، لكن موضع الدليل التفصيلي لم يُوثق بعد.</p><a className="text-link" href={sourceHref} target="_blank" rel="noreferrer">فتح PDF للمراجعة، الصفحة التقريبية {pdfPage}</a></div>
                 )}
                 {(current.question.explanationAr ?? current.question.explanation) && <div className="arabic-explanation"><div><strong>الشرح</strong><p>{current.question.explanationAr ?? current.question.explanation}</p></div></div>}
                 {current.question.wrongOptionExplanations && (

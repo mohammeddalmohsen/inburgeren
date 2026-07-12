@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { ExternalLink, FileText, Maximize2, ScrollText } from 'lucide-react';
 import type { ExamSection } from '../lib/exams';
+import { publicAssetUrl } from '../lib/assetUrl';
 
 interface SourceReaderProps {
   section: ExamSection | null;
@@ -12,7 +13,7 @@ interface SourceReaderProps {
 export function SourceReader({ section, sourceUrl, title, compact = false }: SourceReaderProps) {
   const [mode, setMode] = useState<'text' | 'pdf'>('text');
   const page = section?.pdfPageStart ?? 1;
-  const pdfUrl = useMemo(() => `${sourceUrl}#page=${page}&view=FitH`, [sourceUrl, page]);
+  const pdfUrl = useMemo(() => publicAssetUrl(sourceUrl), [sourceUrl]);
 
   return (
     <aside className={`source-reader${compact ? ' source-reader--compact' : ''}`} aria-label="نص السؤال">
@@ -30,7 +31,7 @@ export function SourceReader({ section, sourceUrl, title, compact = false }: Sou
               <FileText size={16} /> PDF
             </button>
           </div>
-          <a className="icon-button icon-button--small" href={pdfUrl} target="_blank" rel="noreferrer" title="فتح الملف في نافذة جديدة">
+          <a className="icon-button icon-button--small" href={pdfUrl} target="_blank" rel="noreferrer" title={`فتح الملف في نافذة جديدة، ثم انتقل إلى الصفحة ${page}`}>
             <Maximize2 size={17} /><span>فتح</span>
           </a>
         </div>
@@ -49,7 +50,10 @@ export function SourceReader({ section, sourceUrl, title, compact = false }: Sou
         </div>
       ) : (
         <div className="source-reader__pdf">
-          <iframe key={pdfUrl} src={pdfUrl} title={`PDF: ${title}`} loading="lazy" />
+          <object key={pdfUrl} data={pdfUrl} type="application/pdf" title={`PDF: ${title}`}>
+            <iframe src={pdfUrl} title={`PDF: ${title}`} loading="lazy" />
+          </object>
+          <p className="pdf-page-note">إذا فُتح الملف من بدايته، انتقل إلى الصفحة {page}.</p>
           <a className="pdf-fallback" href={pdfUrl} target="_blank" rel="noreferrer">
             إذا لم يظهر PDF على هاتفك، اضغط هنا لفتحه في نافذة جديدة.
           </a>

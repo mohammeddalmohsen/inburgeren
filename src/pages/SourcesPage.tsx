@@ -1,4 +1,5 @@
 import { ExternalLink, ShieldCheck } from 'lucide-react';
+import { publicAssetUrl } from '../lib/assetUrl';
 import { sourceDocuments } from '../lib/exams';
 
 export function SourcesPage() {
@@ -29,7 +30,7 @@ export function SourcesPage() {
             </div>
             <h2>{doc.title}</h2>
             <p>{doc.description}</p>
-            <a className="text-link" href={doc.sourceUrl} target="_blank" rel="noreferrer"><ExternalLink size={16} /> فتح المصدر المرفق</a>
+            <a className="text-link" href={publicAssetUrl(doc.sourceUrl)} target="_blank" rel="noreferrer"><ExternalLink size={16} /> فتح المصدر المرفق</a>
           </article>
         ))}
       </div>
