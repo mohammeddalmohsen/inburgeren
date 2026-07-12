@@ -92,7 +92,7 @@ export function LibraryPage() {
         </div>
       </div>
 
-      <div className="filter-panel">
+      <div className="filter-panel library-filters">
         <div className="search-control">
           <label htmlFor="library-search">البحث</label>
           <div className="search-control__input">

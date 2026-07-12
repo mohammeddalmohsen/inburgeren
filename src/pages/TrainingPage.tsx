@@ -141,7 +141,7 @@ export function TrainingPage() {
   }
 
   const current = queue[index];
-  const sourceSection = findSectionForExample(current.year, current.title);
+  const sourceSection = findSectionForExample(current.year, current.title, current.sectionId);
   const sourceModel = examModels.find((model) => model.year === current.year);
   return (
     <section className="training-page section shell">

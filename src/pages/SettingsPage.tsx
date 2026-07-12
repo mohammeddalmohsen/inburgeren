@@ -50,7 +50,8 @@ export function SettingsPage() {
         <section className="settings-card">
           <span className="settings-card__icon"><Database /></span>
           <div><h2>تقنية التطبيق</h2><p>مشروع PWA مبني بـ React وTypeScript وVite، ويعمل دون إنترنت بعد أول زيارة ناجحة للموقع المنشور.</p></div>
-          <p className="technical-note">التثبيت والعمل دون إنترنت يحتاجان HTTPS أو localhost. فتح index.html مباشرة عبر file:// لا يشغّل Service Worker.</p>
+          <p className="technical-note">ملفات PDF الكبيرة تُحفظ دون إنترنت بعد فتحها أول مرة، ولا تُحمّل كلها تلقائيًا عند تثبيت التطبيق.</p>
+          <p className="technical-note">التثبيت والعمل دون إنترنت يحتاجان HTTPS أو localhost. فتح index.html مباشرة من القرص لا يشغّل Service Worker.</p>
         </section>
 
         <section className="settings-card settings-card--danger">

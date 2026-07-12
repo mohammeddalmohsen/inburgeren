@@ -148,7 +148,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <div className="shell footer__inner">
           <div>
             <strong>NT2 Lezen B1 · Parafrase Lab</strong>
-            <p>أداة تدريب شاملة للنماذج المرفقة مع عرض النص قبل السؤال. ليست موقعًا رسميًا للامتحان.</p>
+            <p>أداة تدريب للنماذج المرفقة مع عرض النص قبل السؤال. ليست موقعًا رسميًا للامتحان.</p>
           </div>
           <p className="local-note">يُحفظ تقدمك محليًا في هذا المتصفح، ويمكن تصديره من الإعدادات.</p>
         </div>

@@ -30,14 +30,14 @@ export function ModelsPage() {
           <span className="section-kicker">كل المواد في مكان واحد</span>
           <h1>النماذج وملفات القراءة</h1>
           <p>
-            النماذج الرسمية 2020–2024 متاحة كتدريب تفاعلي كامل مع النص والأسئلة والاختيارات.
-            نموذج 2025 الرسمي مُدرج بقدر المواد المرفقة، وتوجد أيضًا مجموعات تدريبية حديثة بصيغة PDF.
+            النماذج الرسمية 2020–2024 متاحة كتدريب تفاعلي موثق مع النص والأسئلة والاختيارات.
+            نموذج 2025 الرسمي جزئي تفاعليًا: 19 سؤالًا موثقًا من أصل 35، دون اختراع اختيارات غير موجودة.
           </p>
         </div>
       </div>
 
       <div className="coverage-banner">
-        <div><strong>178</strong><span>سؤالًا رسميًا كاملًا 2020–2024</span></div>
+        <div><strong>178</strong><span>سؤالًا رسميًا موثقًا 2020–2024</span></div>
         <div><strong>19</strong><span>مسألة موثقة من 2025</span></div>
         <div><strong>3</strong><span>مجموعات تدريب حديثة 2025</span></div>
         <div><strong>النص ظاهر</strong><span>قبل الاختيار، وليس بعده</span></div>
@@ -70,7 +70,12 @@ export function ModelsPage() {
                     {interactive && (
                       <div className="model-card__facts">
                         <span>{interactive.sections.length} نصوص</span>
-                        <span>{interactive.questionCount} سؤالًا مهيكلًا</span>
+                        <span>{interactive.questionCount} سؤالًا موجودًا</span>
+                        <span>{interactive.officialQuestionCount ?? interactive.questionCount} العدد الرسمي</span>
+                        <span>{Math.max(0, (interactive.officialQuestionCount ?? interactive.questionCount) - interactive.questionCount)} ناقص</span>
+                        <span>{interactive.sourceUrl ? 'ملف النص موجود' : 'ملف النص غير موجود'}</span>
+                        <span>{interactive.answerSourceUrl ? 'مفتاح الإجابة موجود' : 'مفتاح الإجابة غير موجود'}</span>
+                        <span>{interactive.status === 'partial' ? 'ملف الأسئلة الكامل غير موجود' : 'ملف الأسئلة مهيكل'}</span>
                       </div>
                     )}
                     <div className="model-card__actions">

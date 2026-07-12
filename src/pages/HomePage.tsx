@@ -20,19 +20,19 @@ export function HomePage() {
             <span className="eyebrow"><Sparkles size={15} /> Staatsexamen NT2 · Programma I</span>
             <h1>افهم المعنى، لا تطارد الكلمة نفسها.</h1>
             <p>
-              تدريب شامل على Lezen B1: النص موجود داخل الجلسة، ثم يظهر السؤال والاختيارات. لا يظهر الدليل المحدد أو الحل قبل المحاولة، وتُسجَّل الأخطاء للمراجعة.
+              تدريب موثق على Lezen B1: النص موجود داخل الجلسة، ثم يظهر السؤال والاختيارات حيث تتوفر رسميًا. لا يظهر الدليل المحدد أو الحل قبل المحاولة، وتُسجَّل الأخطاء للمراجعة.
             </p>
             <div className="hero-modern__actions">
               <Link className="button button--primary button--large" to="/train">
                 ابدأ جلسة من 5 أسئلة <ArrowLeft size={18} aria-hidden="true" />
               </Link>
               <Link className="button button--secondary button--large" to="/models">
-                افتح النماذج الكاملة
+                افتح النماذج
               </Link>
             </div>
             <div className="hero-modern__metrics" aria-label="ملخص المحتوى">
-              <div><strong>197+</strong><span>سؤالًا رسميًا مهيكلًا</span></div>
-              <div><strong>2020–2025</strong><span>نماذج رسمية وحديثة</span></div>
+              <div><strong>197</strong><span>سؤالًا/مسألة مهيكلة</span></div>
+              <div><strong>2020–2025</strong><span>2025 جزئي تفاعليًا</span></div>
               <div><strong>{examples.length}</strong><span>تحليل إعادة صياغة</span></div>
             </div>
           </div>
