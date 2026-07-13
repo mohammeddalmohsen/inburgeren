@@ -1,23 +1,44 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Bookmark, Check, CheckCircle2, EyeOff, RotateCcw, Share2, Star, XCircle } from 'lucide-react';
 import type { Example } from '../lib/schema';
-import { examples, levelLabels, skillLabels } from '../lib/data';
+import { levelLabels, skillLabels } from '../lib/data';
+import { paraphrasePairs, type ParaphrasePair } from '../lib/paraphrasePairs';
 import { useProgress } from '../lib/ProgressContext';
 import { useToast } from '../lib/ToastContext';
 import { SourceLink } from './SourceLink';
 
-function optionSeed(example: Example) {
-  return example.id.split('').reduce((sum, char, index) => sum + char.charCodeAt(0) * (index + 5), example.questionNo);
+function optionSeed(pair: ParaphrasePair) {
+  return pair.id.split('').reduce((sum, char, index) => sum + char.charCodeAt(0) * (index + 5), pair.questionNo);
 }
 
-function makeMeaningOptions(example: Example) {
-  const seed = optionSeed(example);
-  const distractors = examples
-    .filter((item) => item.id !== example.id && item.pair.trim() && item.pair !== example.pair)
+function pickPrimaryPair(example: Example) {
+  const pairs = paraphrasePairs.filter((pair) => pair.exampleId === example.id);
+  return pairs.find((pair) => example.evidence.toLocaleLowerCase('nl').includes(pair.left.toLocaleLowerCase('nl')))
+    ?? pairs[0]
+    ?? {
+      id: `${example.id}--fallback`,
+      exampleId: example.id,
+      left: example.evidence,
+      right: example.answer,
+      meaning: example.meaning,
+      explanation: example.explanation,
+      year: example.year,
+      questionNo: example.questionNo,
+      title: example.title,
+      transformationType: example.transformationType,
+      skill: example.skill,
+      level: example.level,
+    };
+}
+
+function makeMeaningOptions(pair: ParaphrasePair) {
+  const seed = optionSeed(pair);
+  const distractors = paraphrasePairs
+    .filter((item) => item.id !== pair.id && item.right.trim() && item.right !== pair.right)
     .sort((a, b) => ((a.questionNo * 17 + seed) % 53) - ((b.questionNo * 17 + seed) % 53))
     .slice(0, 2)
-    .map((item) => item.pair);
-  return [example.pair, ...distractors]
+    .map((item) => item.right);
+  return [pair.right, ...distractors]
     .slice(0, 3)
     .sort((a, b) => ((a.length + seed) % 13) - ((b.length + seed) % 13));
 }
@@ -31,9 +52,10 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
   const { get, toggle, markOpened, recordAnswer, addUnknownWord } = useProgress();
   const { showToast } = useToast();
   const progress = get(example.id);
-  const options = useMemo(() => makeMeaningOptions(example), [example]);
+  const primaryPair = useMemo(() => pickPrimaryPair(example), [example]);
+  const options = useMemo(() => makeMeaningOptions(primaryPair), [primaryPair]);
   const answered = selected.length > 0;
-  const correct = selected === example.pair;
+  const correct = selected === primaryPair.right;
 
   useEffect(() => {
     setSelected('');
@@ -50,7 +72,7 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
   const choose = async (option: string) => {
     if (correct) return;
     setSelected(option);
-    const isCorrect = option === example.pair;
+    const isCorrect = option === primaryPair.right;
     if (!isCorrect) setHadWrong(true);
     if (isCorrect) setRevealed(true);
     await recordAnswer(example.id, { correct: isCorrect, firstTry: !hadWrong, hadWrong });
@@ -118,7 +140,7 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
 
       <section className="question-panel library-prompt">
         <small>في النص قد تأتي بهذا الشكل</small>
-        <p lang="nl" dir="ltr">{example.evidence}</p>
+        <p lang="nl" dir="ltr">{primaryPair.left}</p>
         <span>اختر العبارة التي تحمل المعنى نفسه في السؤال أو الجواب.</span>
       </section>
 
@@ -130,7 +152,7 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
         <div className="meaning-options">
           {options.map((option) => {
             const isSelected = selected === option;
-            const isCorrect = option === example.pair;
+            const isCorrect = option === primaryPair.right;
             const showCorrect = correct && isCorrect;
             return (
               <button
@@ -198,7 +220,7 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
             </div>
             <div className="evidence-box evidence-box--accent">
               <small>الرابط المعنوي</small>
-              <p lang="nl" dir="ltr">{example.pair}</p>
+              <p lang="nl" dir="ltr">{primaryPair.left} ↔ {primaryPair.right}</p>
             </div>
           </section>
 
