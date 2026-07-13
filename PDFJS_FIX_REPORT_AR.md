@@ -18,7 +18,8 @@
 - تنظيف `renderTask` و`loadingTask` وموارد PDF عند تغيير الصفحة أو الخروج.
 - إضافة اختبارات للـworker المحلي وتصحيح رقم الصفحة وإلغاء الرسم.
 - تحديث علامة الإصدار الظاهرة إلى:
-  `v16 - إصلاح عارض PDF.js`
+  `v17 - إصلاح PDF.js و package-lock`
+- تصحيح إدخالات `@emnapi/core` و`@emnapi/runtime` داخل `package-lock.json` إلى `1.11.2` لأن GitHub Actions كان يتوقع هذا الإصدار أثناء `npm ci`.
 
 ## نتائج التحقق
 
