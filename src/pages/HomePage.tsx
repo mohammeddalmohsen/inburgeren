@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpenText, Brain, CheckCircle2, Gamepad2, Layers3, Sparkles } from 'lucide-react';
+import { ArrowLeft, BookOpenText, Brain, CheckCircle2, Gamepad2, Layers3, SearchCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { examples, skillLabels } from '../lib/data';
 import { useProgress } from '../lib/ProgressContext';
@@ -24,7 +24,7 @@ export function HomePage() {
             <span className="eyebrow"><Sparkles size={15} /> Staatsexamen NT2 · Programma I</span>
             <h1>افهم المعنى، لا تطارد الكلمة نفسها.</h1>
             <p>
-              تدريب موثق على Lezen B1: النص موجود داخل الجلسة، ثم يظهر السؤال والاختيارات حيث تتوفر رسميًا. لا يظهر الدليل المحدد أو الحل قبل المحاولة، وتُسجَّل الأخطاء للمراجعة.
+              تدريب موثق على Lezen B1 يركز على المهارة الأهم: أن تجد الفكرة نفسها عندما تظهر في النص بكلمات، وفي السؤال أو الجواب بكلمات أخرى.
             </p>
             <div className="hero-modern__actions">
               <Link className="button button--primary button--large" to="/train">
@@ -70,25 +70,30 @@ export function HomePage() {
       <section className="section shell">
         <div className="section-heading">
           <div>
-            <span className="section-kicker">طريق واضح</span>
-            <h2>تدرّب بالطريقة التي يحتاجها الامتحان</h2>
+            <span className="section-kicker">طريقة تعلّم عملية</span>
+            <h2>تدرّب على المعنى كما يأتي في الامتحان</h2>
           </div>
         </div>
         <div className="feature-grid">
           <article className="feature-card">
             <span className="feature-card__icon"><Brain /></span>
-            <h3>محاولة قبل الحل</h3>
-            <p>يُخفى الجواب والدليل بالكامل. عند الخطأ يظهر Niet goed، وتبقى في السؤال نفسه حتى تحاول مرة أخرى.</p>
+            <h3>المعنى قبل الكلمة</h3>
+            <p>لا تبحث عن نفس الكلمة حرفيًا. تعلّم أن ترى أن عبارة مثل heel goed je best doen قد تعني في الجواب hard werken.</p>
           </article>
           <article className="feature-card">
-            <span className="feature-card__icon"><BookOpenText /></span>
-            <h3>السؤال أولًا والبحث الذكي</h3>
-            <p>ابدأ بالسؤال والاختيارات، وحدد كلمة البحث، ثم اقرأ الجزء المرتبط بالسؤال. لا تحتاج إلى قراءة النص كلمةً كلمة.</p>
+            <span className="feature-card__icon"><SearchCheck /></span>
+            <h3>سؤال ثم دليل</h3>
+            <p>اقرأ السؤال والاختيارات لتعرف ما تبحث عنه، ثم ارجع إلى النص للعبارة التي تحمل نفس الفكرة لا نفس الشكل.</p>
+          </article>
+          <article className="feature-card">
+            <span className="feature-card__icon"><Gamepad2 /></span>
+            <h3>تكرار قصير يوميًا</h3>
+            <p>المكتبة ولعبة المعنى تعرضان عبارة واحدة وثلاث اختيارات. عشر دقائق يوميًا تكفي لبناء حسّ إعادة الصياغة.</p>
           </article>
           <article className="feature-card">
             <span className="feature-card__icon"><Layers3 /></span>
-            <h3>مراجعة دورية</h3>
-            <p>في الجلسات الأطول تظهر وقفة بعد كل خمسة أسئلة، وتعرض الأخطاء وأنواع التحويل التي تحتاج إلى انتباه.</p>
+            <h3>مراجعة الأخطاء</h3>
+            <p>كل اختيار خاطئ يتحول إلى مراجعة، حتى ترى الأنماط التي تخدعك: مرادف، نفي، سبب ونتيجة، أو تلخيص.</p>
           </article>
         </div>
       </section>

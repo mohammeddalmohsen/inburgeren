@@ -27,7 +27,7 @@ export function PdfViewerPage() {
       <section className="section shell checkpoint-page">
         <div className="summary-card">
           <span className="summary-icon"><FileWarning /></span>
-          <h1>{removedReadingGuide ? 'تم حذف دليل تقنيات القراءة' : 'ملف PDF غير موجود'}</h1>
+          <h1>{removedReadingGuide ? 'تم حذف هذا الملف التعليمي' : 'ملف PDF غير موجود'}</h1>
           <p>
             {removedReadingGuide
               ? 'استُبدل الدليل النظري بلعبة العبارات العملية لأنها أقرب لطريقة أسئلة Lezen B1.'

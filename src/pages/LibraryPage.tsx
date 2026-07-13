@@ -84,9 +84,9 @@ export function LibraryPage() {
     <section className="section shell library-page">
       <div className="page-heading">
         <div>
-          <span className="section-kicker">مكتبة موثقة</span>
-          <h1>أمثلة إعادة الصياغة</h1>
-          <p>الجواب والدليل مخفيان افتراضيًا. ابحث في المجال الذي تختاره ثم اكشف المثال بعد أن تفكر.</p>
+          <span className="section-kicker">مكتبة تفاعلية</span>
+          <h1>تدريب إعادة الصياغة</h1>
+          <p>كل بطاقة تعرض عبارة من النص وثلاثة اختيارات. اختر العبارة التي تحمل المعنى نفسه كما تأتي في السؤال أو الجواب.</p>
         </div>
         <div className="page-heading__actions">
           <button className="button button--secondary" type="button" onClick={random}><Shuffle size={17} /> مثال عشوائي</button>
@@ -138,7 +138,7 @@ export function LibraryPage() {
             <option value="year-asc">الأقدم أولًا</option><option value="year-desc">الأحدث أولًا</option><option value="question">رقم السؤال</option><option value="title">عنوان النص</option>
           </select></label>
         </div>
-        <div className="filter-panel__note"><Filter size={16} /> فلتر الحالة واحد فقط؛ لا يمكن تشغيل «متقنة» و«مراجعة» معًا.</div>
+        <div className="filter-panel__note"><Filter size={16} /> المحتوى مستنتج من أسئلة النماذج: عبارات مختلفة، ومعنى واحد.</div>
       </div>
 
       <div className="results-line" role="status" aria-live="polite">

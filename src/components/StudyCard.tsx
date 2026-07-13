@@ -1,18 +1,45 @@
-import { useEffect, useRef, useState } from 'react';
-import { Bookmark, Check, Eye, EyeOff, RotateCcw, Share2, Star } from 'lucide-react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Bookmark, Check, CheckCircle2, EyeOff, RotateCcw, Share2, Star, XCircle } from 'lucide-react';
 import type { Example } from '../lib/schema';
-import { levelLabels, skillLabels } from '../lib/data';
+import { examples, levelLabels, skillLabels } from '../lib/data';
 import { useProgress } from '../lib/ProgressContext';
 import { useToast } from '../lib/ToastContext';
 import { SourceLink } from './SourceLink';
 
+function optionSeed(example: Example) {
+  return example.id.split('').reduce((sum, char, index) => sum + char.charCodeAt(0) * (index + 5), example.questionNo);
+}
+
+function makeMeaningOptions(example: Example) {
+  const seed = optionSeed(example);
+  const distractors = examples
+    .filter((item) => item.id !== example.id && item.pair.trim() && item.pair !== example.pair)
+    .sort((a, b) => ((a.questionNo * 17 + seed) % 53) - ((b.questionNo * 17 + seed) % 53))
+    .slice(0, 2)
+    .map((item) => item.pair);
+  return [example.pair, ...distractors]
+    .slice(0, 3)
+    .sort((a, b) => ((a.length + seed) % 13) - ((b.length + seed) % 13));
+}
+
 export function StudyCard({ example, forceOpen = false }: { example: Example; forceOpen?: boolean }) {
+  const [selected, setSelected] = useState('');
+  const [hadWrong, setHadWrong] = useState(false);
   const [revealed, setRevealed] = useState(forceOpen);
   const [word, setWord] = useState('');
   const cardRef = useRef<HTMLElement>(null);
-  const { get, toggle, markOpened, addUnknownWord } = useProgress();
+  const { get, toggle, markOpened, recordAnswer, addUnknownWord } = useProgress();
   const { showToast } = useToast();
   const progress = get(example.id);
+  const options = useMemo(() => makeMeaningOptions(example), [example]);
+  const answered = selected.length > 0;
+  const correct = selected === example.pair;
+
+  useEffect(() => {
+    setSelected('');
+    setHadWrong(false);
+    setRevealed(forceOpen);
+  }, [example.id, forceOpen]);
 
   useEffect(() => {
     if (!forceOpen) return;
@@ -20,9 +47,18 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
     window.setTimeout(() => cardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
   }, [forceOpen]);
 
-  const reveal = async () => {
-    setRevealed((value) => !value);
-    if (!revealed) await markOpened(example.id);
+  const choose = async (option: string) => {
+    if (correct) return;
+    setSelected(option);
+    const isCorrect = option === example.pair;
+    if (!isCorrect) setHadWrong(true);
+    if (isCorrect) setRevealed(true);
+    await recordAnswer(example.id, { correct: isCorrect, firstTry: !hadWrong, hadWrong });
+  };
+
+  const revealDetails = async () => {
+    setRevealed(true);
+    await markOpened(example.id);
   };
 
   const share = async () => {
@@ -72,7 +108,7 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
 
       <div className="study-card__title-row">
         <div>
-          <small lang="nl">Tekst</small>
+          <small lang="nl">Parafrase uit het examen</small>
           <h3 lang="nl" dir="ltr">{example.title}</h3>
         </div>
         <span className={`mode-badge mode-badge--${example.mode}`}>
@@ -80,24 +116,57 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
         </span>
       </div>
 
-      <section className="question-panel">
-        <small>السؤال</small>
-        <p lang="nl" dir="ltr">{example.question}</p>
+      <section className="question-panel library-prompt">
+        <small>في النص قد تأتي بهذا الشكل</small>
+        <p lang="nl" dir="ltr">{example.evidence}</p>
+        <span>اختر العبارة التي تحمل المعنى نفسه في السؤال أو الجواب.</span>
       </section>
 
-      {!revealed ? (
-        <div className="hidden-answer-panel">
-          <EyeOff size={24} aria-hidden="true" />
-          <div>
-            <strong>الإجابة والدليل مخفيان</strong>
-            <p>حدّد كلمات البحث وفكّر في المعنى قبل الكشف.</p>
-          </div>
-          <button className="button button--primary" type="button" onClick={() => void reveal()}>
-            <Eye size={17} /> إظهار الجواب والدليل
-          </button>
+      <div className="meaning-choice-panel">
+        <div className="meaning-choice-panel__head">
+          <strong>ما العبارة الأقرب؟</strong>
+          <span>{answered ? (correct ? 'صحيح' : 'جرّب مرة أخرى') : '3 اختيارات'}</span>
         </div>
-      ) : (
+        <div className="meaning-options">
+          {options.map((option) => {
+            const isSelected = selected === option;
+            const isCorrect = option === example.pair;
+            const showCorrect = correct && isCorrect;
+            return (
+              <button
+                key={option}
+                className={`meaning-option${isSelected ? ' is-selected' : ''}${showCorrect ? ' is-correct' : ''}${isSelected && !isCorrect ? ' is-wrong' : ''}`}
+                type="button"
+                onClick={() => void choose(option)}
+                disabled={correct}
+              >
+                <span lang="nl" dir="ltr">{option}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {answered && !correct && (
+          <div className="feedback feedback--wrong" role="status">
+            <XCircle size={21} />
+            <div><strong>ليست الأقرب</strong><p>الكلمات قد تبدو قريبة، لكن المطلوب هو المعنى نفسه. اختر مرة أخرى.</p></div>
+          </div>
+        )}
+        {correct && (
+          <div className="feedback feedback--correct" role="status">
+            <CheckCircle2 size={21} />
+            <div><strong>صحيح</strong><p>{example.meaning}</p></div>
+          </div>
+        )}
+      </div>
+
+      {revealed ? (
         <div className="reveal-stack">
+          <section className="question-panel">
+            <small>السؤال الأصلي</small>
+            <p lang="nl" dir="ltr">{example.question}</p>
+          </section>
+
           <section className="answer-panel">
             <small>الإجابة المعتمدة</small>
             <p lang="nl" dir="ltr">{example.answer}</p>
@@ -158,8 +227,18 @@ export function StudyCard({ example, forceOpen = false }: { example: Example; fo
             </div>
           </div>
 
-          <button className="collapse-button" type="button" onClick={() => void reveal()}>
+          <button className="collapse-button" type="button" onClick={() => setRevealed(false)}>
             <EyeOff size={16} /> إخفاء الجواب مرة أخرى
+          </button>
+        </div>
+      ) : (
+        <div className="hidden-answer-panel hidden-answer-panel--compact">
+          <div>
+            <strong>التفاصيل مخفية</strong>
+            <p>اختر العبارة الصحيحة أولًا. يمكنك كشف التفاصيل إذا كنت تراجع فقط.</p>
+          </div>
+          <button className="button button--secondary" type="button" onClick={() => void revealDetails()}>
+            كشف الشرح
           </button>
         </div>
       )}
