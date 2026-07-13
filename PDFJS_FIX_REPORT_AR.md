@@ -18,8 +18,12 @@
 - تنظيف `renderTask` و`loadingTask` وموارد PDF عند تغيير الصفحة أو الخروج.
 - إضافة اختبارات للـworker المحلي وتصحيح رقم الصفحة وإلغاء الرسم.
 - تحديث علامة الإصدار الظاهرة إلى:
-  `v17 - إصلاح PDF.js و package-lock`
+  `v18 - package-lock متوافق مع npm 10`
 - تصحيح إدخالات `@emnapi/core` و`@emnapi/runtime` داخل `package-lock.json` إلى `1.11.2` لأن GitHub Actions كان يتوقع هذا الإصدار أثناء `npm ci`.
+- إعادة توليد `package-lock.json` باستخدام npm `10.9.8` مثل GitHub Actions، مما أضاف إدخالات top-level المطلوبة:
+  `node_modules/@emnapi/core`
+  و
+  `node_modules/@emnapi/runtime`.
 
 ## نتائج التحقق
 
