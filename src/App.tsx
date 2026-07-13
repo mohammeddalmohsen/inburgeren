@@ -47,6 +47,7 @@ export function App() {
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/sources" element={<SourcesPage />} />
+          <Route path="/pdf" element={<PdfViewerPage />} />
           <Route path="/pdf-viewer" element={<PdfViewerPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

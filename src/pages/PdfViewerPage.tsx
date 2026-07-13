@@ -12,18 +12,29 @@ function toPositiveInt(value: string | null) {
 export function PdfViewerPage() {
   const [params, setParams] = useSearchParams();
   const documentId = params.get('document') ?? '';
+  const legacySrc = params.get('src') ?? '';
+  const legacyTitle = params.get('title') ?? '';
   const page = toPositiveInt(params.get('page'));
-  const doc = sourceDocuments.find((item) => item.id === documentId);
+  const doc = sourceDocuments.find((item) => item.id === documentId)
+    ?? sourceDocuments.find((item) => legacySrc && item.sourceUrl === legacySrc);
+  const removedReadingGuide = legacySrc.includes('reading-techniques.pdf') || documentId === 'reading-techniques';
+  const pdfTitle = doc?.title ?? legacyTitle.trim() ?? 'PDF';
+  const pdfUrl = doc ? publicAssetUrl(doc.sourceUrl) : legacySrc && !removedReadingGuide ? publicAssetUrl(legacySrc) : '';
   usePageMeta(doc ? `PDF — ${doc.title}` : 'عارض PDF');
 
-  if (!doc) {
+  if (!pdfUrl) {
     return (
       <section className="section shell checkpoint-page">
         <div className="summary-card">
           <span className="summary-icon"><FileWarning /></span>
-          <h1>ملف PDF غير موجود</h1>
-          <p>تحقق من رابط الملف أو افتح صفحة المصادر.</p>
+          <h1>{removedReadingGuide ? 'تم حذف دليل تقنيات القراءة' : 'ملف PDF غير موجود'}</h1>
+          <p>
+            {removedReadingGuide
+              ? 'استُبدل الدليل النظري بلعبة العبارات العملية لأنها أقرب لطريقة أسئلة Lezen B1.'
+              : 'تحقق من رابط الملف أو افتح صفحة المصادر.'}
+          </p>
           <div className="summary-actions">
+            <Link className="button button--primary" to="/phrases">فتح لعبة المعنى</Link>
             <Link className="button button--primary" to="/sources">فتح المصادر</Link>
             <Link className="button button--secondary" to="/models">النماذج</Link>
           </div>
@@ -32,9 +43,10 @@ export function PdfViewerPage() {
     );
   }
 
-  const pdfUrl = publicAssetUrl(doc.sourceUrl);
   const setPage = (nextPage: number) => {
-    setParams({ document: doc.id, page: String(Math.max(1, nextPage)) });
+    const next = new URLSearchParams(params);
+    next.set('page', String(Math.max(1, nextPage)));
+    setParams(next);
   };
 
   return (
@@ -42,7 +54,7 @@ export function PdfViewerPage() {
       <header className="pdf-viewer-toolbar">
         <div>
           <span className="section-kicker">PDF الأصلي</span>
-          <h1>{doc.title}</h1>
+          <h1>{pdfTitle}</h1>
         </div>
         <div className="pdf-viewer-actions">
           <button className="icon-button" type="button" onClick={() => setPage(page - 1)} disabled={page <= 1} title="الصفحة السابقة"><ArrowRight size={18} /></button>
@@ -54,8 +66,8 @@ export function PdfViewerPage() {
         </div>
       </header>
       <div className="pdf-viewer-frame">
-        <object data={pdfUrl} type="application/pdf" title={doc.title}>
-          <iframe src={pdfUrl} title={doc.title} />
+        <object data={`${pdfUrl}#page=${page}&view=FitH`} type="application/pdf" title={pdfTitle}>
+          <iframe src={`${pdfUrl}#page=${page}&view=FitH`} title={pdfTitle} />
         </object>
         <p className="pdf-page-note">إذا فتح المتصفح الملف من الصفحة الأولى، انتقل يدويًا إلى الصفحة {page}.</p>
       </div>
